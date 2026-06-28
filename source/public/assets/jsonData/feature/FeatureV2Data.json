@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "thumb": "creative42-project-identity.jpg",
+        "name": "42 Degree Identity",
+        "textFirst": "A complete identity system for a UAE brand",
+        "textLast": "built around sharper positioning.",
+        "info": "Brand Identity",
+        "date": "May 6th, 2024",
+        "delay": "100"
+    },
+    {
+        "id": 2,
+        "thumb": "creative42-project-brand-system.jpg",
+        "name": "Retail Brand System",
+        "textFirst": "A flexible visual language for product",
+        "textLast": "launches, social content, and sales journeys.",
+        "info": "Web Design",
+        "date": "",
+        "delay": "100"
+    },
+    {
+        "id": 3,
+        "thumb": "creative42-project-launch.jpg",
+        "name": "Launch Content Kit",
+        "textFirst": "Campaign assets designed to help a new",
+        "textLast": "offer enter market with momentum.",
+        "info": "Development",
+        "date": "",
+        "delay": "200"
+    },
+    {
+        "id": 4,
+        "thumb": "creative42-project-campaign.jpg",
+        "name": "Market Shift Campaign",
+        "textFirst": "A digital campaign built to turn attention",
+        "textLast": "into qualified engagement and action.",
+        "info": "Marketing",
+        "date": "May 6th, 2024",
+        "delay": "100"
+    },
+    {
+        "id": 5,
+        "thumb": "creative42-project-growth.jpg",
+        "name": "Growth Analytics Sprint",
+        "textFirst": "A performance-led content and SEO sprint",
+        "textLast": "designed around measurable growth.",
+        "info": "Brand Identity",
+        "date": "",
+        "delay": "200"
+    },
+    {
+        "id": 6,
+        "thumb": "creative42-project-ui.jpg",
+        "name": "Interactive Experience",
+        "textFirst": "A responsive interface shaped for clarity,",
+        "textLast": "trust, and smoother user decisions.",
+        "info": "Digital Marketing",
+        "date": "",
+        "delay": "100"
+    },
+    {
+        "id": 7,
+        "thumb": "creative42-project-web.jpg",
+        "name": "Angular Web Experience",
+        "textFirst": "A website experience crafted for a sharper",
+        "textLast": "brand story and stronger conversion path.",
+        "info": "User Interface",
+        "date": "May 6th, 2024",
+        "delay": "200"
+    }
+]

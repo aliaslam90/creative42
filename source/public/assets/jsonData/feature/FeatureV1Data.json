@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "thumb": "creative42-project-identity.jpg",
+        "projectName": "42 Degree Identity",
+        "subTitle1": "A visual identity system shaped to help a UAE brand",
+        "subTitle2": "stand apart with a sharper strategic angle.",
+        "info": "Brand Identity",
+        "date": "May 6th, 2024"
+    },
+    {
+        "id": 2,
+        "thumb": "creative42-project-campaign.jpg",
+        "projectName": "Market Shift Campaign",
+        "subTitle1": "A digital campaign built to turn market noise",
+        "subTitle2": "into clear attention, engagement, and action.",
+        "info": "Marketing",
+        "date": "April 12th, 2024"
+    },
+    {
+        "id": 3,
+        "thumb": "creative42-project-web.jpg",
+        "projectName": "Angular Web Experience",
+        "subTitle1": "A responsive website experience crafted for",
+        "subTitle2": "clarity, momentum, and conversion.",
+        "info": "User Interface",
+        "date": "March 1st, 2024"
+    }
+]

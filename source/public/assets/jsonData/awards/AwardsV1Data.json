@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "title": "I. Define the 42 Degree Angle",
+        "date": "Discovery"
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "title": "II. Ideate the Direction",
+        "date": "Concepts"
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "title": "III. Design the Experience",
+        "date": "Identity"
+    },
+    {
+        "id": 4,
+        "activeClass": "",
+        "title": "IV. Develop the System",
+        "date": "Build"
+    },
+    {
+        "id": 5,
+        "activeClass": "",
+        "title": "V. Launch with Momentum",
+        "date": "Go Live"
+    },
+    {
+        "id": 6,
+        "activeClass": "",
+        "title": "VI. Optimize What Works",
+        "date": "Growth"
+    }
+]

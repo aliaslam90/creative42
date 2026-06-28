@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "thumb": "stat-angle.png",
+        "delay": "100",
+        "title": "Creative Angles Explored",
+        "end": "42"
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "thumb": "stat-touchpoints.png",
+        "delay": "200",
+        "title": "Brand Touchpoints Built",
+        "end": "120"
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "thumb": "stat-campaign.png",
+        "delay": "400",
+        "title": "Campaign Ideas Shaped",
+        "end": "90"
+    },
+    {
+        "id": 4,
+        "activeClass": "",
+        "thumb": "stat-uae-market.png",
+        "delay": "600",
+        "title": "UAE Market Focus",
+        "end": "100"
+    }
+]
