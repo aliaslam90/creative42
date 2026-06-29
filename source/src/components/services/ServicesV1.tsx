@@ -29,7 +29,7 @@ const ServicesV1 = () => {
                             Our Service
                         </span>
                         <AnimatedText>
-                            {`At Creative42.ai, we turn strategy, design, content, and digital execution into one clear angle for growth, tailored for ambitious UAE brands.`}
+                            {`At Creative42.ai, our work moves through three connected disciplines: branding, communications, and environments, each shaped from a sharper 42 degree angle.`}
                         </AnimatedText>
                     </div>
                 </div>

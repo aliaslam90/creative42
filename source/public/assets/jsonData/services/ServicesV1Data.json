@@ -2,69 +2,68 @@
     {
         "id": 1,
         "activeClass": "active",
-        "name": "Branding Identity",
+        "name": "Branding",
         "thumb": "service1.png",
         "thumbFull1": "service-single1-1.jpg",
         "thumbFull2": "service-single1-2.jpg",
-        "text": "Complete identity systems built around a clear 42 degree brand angle: logo direction, visual language, messaging, and rollout guidance.",
-        "price": "12000",
+        "text": "Strategic brand foundations, stories, names, messaging, identity systems, and positioning work shaped around a clear Creative42 angle.",
+        "price": "Custom quote",
         "icon": "service-icon1.svg",
         "features": [
-            "I. Brand Strategy",
-            "II. Logo & Identity System",
-            "III. Visual Language",
-            "IV. Brand Guidelines"
+            "01 Branding",
+            "02 Brand Audits",
+            "03 Brand Positioning",
+            "04 Stakeholder Engagement",
+            "05 Brand Architecture",
+            "06 Brand Strategy",
+            "07 Brand Stories",
+            "08 Naming & Taglines",
+            "09 Messaging & Tone",
+            "10 Identity Development",
+            "11 Brand Systems"
         ]
     },
     {
         "id": 2,
         "activeClass": "",
-        "name": "Web & Interactive Design",
+        "name": "Communications",
         "thumb": "service2.png",
         "thumbFull1": "service-single2-1.jpg",
         "thumbFull2": "service-single2-2.jpg",
-        "text": "Responsive websites and interactive journeys designed to help UAE audiences understand, trust, and act faster.",
-        "price": "18000",
+        "text": "Clear, crafted communication systems across print, digital, reporting, social, UX/UI, and website design and build.",
+        "price": "Custom quote",
         "icon": "service-icon2.svg",
         "features": [
-            "I. UX Architecture",
-            "II. Website Interface Design",
-            "III. Responsive Prototyping",
-            "IV. Conversion Journeys"
+            "01 Brochure Design",
+            "02 Technical Drawing",
+            "03 Map Creation",
+            "04 Books & Publications",
+            "05 Stationery",
+            "06 UX/UI",
+            "07 Website Design & Build",
+            "08 Social Media",
+            "09 Annual Reports"
         ]
     },
     {
         "id": 3,
         "activeClass": "",
-        "name": "Digital Development",
+        "name": "Environments",
         "thumb": "service3.png",
         "thumbFull1": "service-single3-1.jpg",
         "thumbFull2": "service-single3-2.jpg",
-        "text": "Clean, scalable digital builds that bring campaign pages, brand platforms, and marketing experiences to life.",
-        "price": "22000",
+        "text": "Spatial and branded environment work for wayfinding, exhibitions, visual merchandising, signage, placemaking, and 3D visualisation.",
+        "price": "Custom quote",
         "icon": "service-icon3.svg",
         "features": [
-            "I. Frontend Development",
-            "II. CMS & Content Setup",
-            "III. Performance Optimization",
-            "IV. Launch Support"
-        ]
-    },
-    {
-        "id": 4,
-        "activeClass": "",
-        "name": "SEO & Digital Marketing",
-        "thumb": "service4.png",
-        "thumbFull1": "service-single4-1.jpg",
-        "thumbFull2": "service-single4-2.jpg",
-        "text": "Search, content, social, and campaign strategy shaped to cut through noise and grow qualified attention.",
-        "price": "15000",
-        "icon": "service-icon4.svg",
-        "features": [
-            "I. SEO Strategy",
-            "II. Social Campaigns",
-            "III. Content Calendars",
-            "IV. Performance Reporting"
+            "01 Wayfinding",
+            "02 Exhibitions",
+            "03 Furniture Sourcing",
+            "04 Visual Merchandising",
+            "05 Placemaking",
+            "06 Branded Environments",
+            "07 Architectural Signage",
+            "08 3D Visualisation"
         ]
     }
 ]

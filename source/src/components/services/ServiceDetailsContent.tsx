@@ -11,10 +11,11 @@ interface DataType {
     thumbFull2?: string;
     text?: string;
     price?: string;
+    features?: string[];
 }
 
 const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
-    const { name, text, price, thumbFull1, thumbFull2 } = serviceData
+    const { name, text, price, thumbFull1, thumbFull2, features = [] } = serviceData
 
     const containerRef = useScaleDownAnimation('.scaleDown');
 
@@ -48,8 +49,8 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                                 <span className="subtitle">{text}</span>
                             </div>
                             <div className="feature-project-info-box">
-                                <span className="title">Pricing:</span>
-                                <span className="subtitle">$ {price}</span>
+                                <span className="title">Engagement:</span>
+                                <span className="subtitle">{price}</span>
                             </div>
                             <div className="feature-project-info-box">
                                 <Link href="/contact" className="theme-btn">
@@ -67,16 +68,15 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                             </span>
                             <div className="right">
                                 <AnimatedText>
-                                    We start by defining the angle: the audience tension, market opportunity, brand truth, and digital touchpoints that can move people from attention to action.
+                                    We start by defining the angle: the audience tension, market opportunity, brand truth, and creative touchpoints that can move people from attention to action.
                                 </AnimatedText>
                                 <AnimatedText>
-                                    From there, our creative and production teams shape identities, content, websites, and campaigns with one connected direction so every detail feels intentional.
+                                    From there, our creative and production teams shape the work with one connected direction so every detail feels intentional.
                                 </AnimatedText>
                                 <ul>
-                                    <li>I. Brand Strategy</li>
-                                    <li>II. Visual Identity</li>
-                                    <li>III. Digital Experience</li>
-                                    <li>IV. Campaign Execution</li>
+                                    {features.map(feature => (
+                                        <li key={feature}>{feature}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
