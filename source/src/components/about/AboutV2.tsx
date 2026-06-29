@@ -15,10 +15,13 @@ const AboutV2 = () => {
                         </span>
                         <div className="right">
                             <AnimatedText>
-                                At Creative42.ai, the number 42 represents a symbolic creative deviation: a new line of sight that challenges norms and opens doors to innovation.
+                                Why Creative42.ai? At Creative42.ai, we believe that true creativity begins when you look at things from a different angle, specifically 42 degrees. The name Creative42 is inspired by our commitment to breaking away from conventional perspectives. The number 42 in our identity represents a symbolic angle of creative deviation, a new line of sight that challenges norms and opens doors to innovation.
                             </AnimatedText>
                             <AnimatedText>
-                                We build brand identities, content systems, websites, and campaigns for UAE businesses that want more than trend-following. We help them set the direction.
+                                We do not follow trends, we set them. Our strategies, content, and digital experiences are built with a mindset that leans 42 degrees away from the ordinary. This unique angle reflects how we analyze markets, craft stories, and design campaigns that cut through the noise and speak directly to the human experience.
+                            </AnimatedText>
+                            <AnimatedText>
+                                Creativity is not linear, it is angular. At Creative42.ai, we deliver marketing solutions seen from a smarter, sharper, and more original angle.
                             </AnimatedText>
                         </div>
                     </div>
