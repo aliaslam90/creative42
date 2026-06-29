@@ -22,13 +22,13 @@
 
     .hero-sec .hero-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         row-gap: 32px;
     }
 
     .hero-sec .hero-bottom h2 {
-        font-size: 74px;
-        line-height: 74px;
+        font-size: clamp(78px, 9vw, 132px);
+        line-height: 0.92;
         letter-spacing: -0.04em;
         font-weight: 400;
         font-family: Arapey, serif;
@@ -368,8 +368,8 @@
     }
 
     .hero-sec .hero-bottom h2 {
-        font-size: 52px;
-        line-height: 52px;
+        font-size: clamp(56px, 15vw, 82px);
+        line-height: 0.95;
         padding: 7px;
         margin: -7px;
     }
