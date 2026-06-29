@@ -2,21 +2,21 @@
     {
         "id": 1,
         "activeClass": "active",
-        "thumb": "service1.png",
+        "thumb": "service-3d-1-clean.png",
         "title": "A 42 Degree Strategy",
         "text": "We begin by finding the creative deviation that makes the brand stand apart: the audience insight, market tension, and story angle that can own attention."
     },
     {
         "id": 2,
         "activeClass": "",
-        "thumb": "service2.png",
+        "thumb": "service-3d-2.png",
         "title": "Designed for UAE Momentum",
         "text": "Our work is shaped for ambitious UAE businesses, with brand, content, and digital decisions tuned to local expectations, global standards, and fast-moving markets."
     },
     {
         "id": 3,
         "activeClass": "",
-        "thumb": "service3.png",
+        "thumb": "service-3d-3.png",
         "title": "Human-First Execution",
         "text": "We craft campaigns and experiences that feel clear, memorable, and useful, because creativity only works when real people understand it and act on it."
     }

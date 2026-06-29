@@ -1882,7 +1882,7 @@ a {
     top: -50px;
     height: 280px;
     width: 306px;
-    object-fit: cover;
+    object-fit: contain;
     animation: upDownAnim 2s infinite linear;
 }
 
