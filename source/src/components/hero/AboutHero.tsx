@@ -1,32 +1,59 @@
-import contact from '@/assets/images/contact.png';
+"use client";
+
 import btnArrow from '@/assets/images/btn-arrow.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CSSProperties, useEffect, useState } from 'react';
 
 interface DataType {
     title?: string;
 }
 
 const HeroV2 = ({ title }: DataType) => {
+    const [isClient, setIsClient] = useState(false);
+    const [scrollShift, setScrollShift] = useState(0);
+    const pageTitle = title ? title : "Not Found";
+    const titleWords = pageTitle.split(" ");
+    const firstWord = titleWords[0];
+    const restTitle = titleWords.slice(1).join(" ");
+
+    useEffect(() => {
+        setIsClient(true);
+
+        const handleScroll = () => {
+            setScrollShift(Math.min(window.scrollY * 0.18, 120));
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <>
-            <div className="hero-sec about-hero-sec" id="hero">
+            <div
+                className="hero-sec about-hero-sec"
+                id="hero"
+                style={{ "--hero-scroll-shift": `${scrollShift}px` } as CSSProperties}
+            >
                 <div className="custom-container">
                     <div className="hero-inner">
-                        <Image className="hero-shape" src={contact} alt="Shape" />
-                        <div className="hero-top">
-                            <div className="hero-top-desc">
-                                <p>{`"At Creative42.ai, creativity is not linear. It is angular, sharper, and built to reveal the opportunity others miss."`}</p>
-                            </div>
-                            <div className="author-info">
-                                <h4>Creative42.ai</h4>
-                                <span>UAE-Based Design & Marketing Agency</span>
-                            </div>
+
+                        <div className="hero-video">
+                            {isClient && (
+                                <video loop muted autoPlay>
+                                    <source src="/assets/video/hero-video.mp4" type="video/mp4" />
+                                </video>
+                            )}
                         </div>
+
                         <div className="hero-bottom">
-                            <div className="left">
-                                <h2>{title ? title : "Not found Page"}</h2>
-                                <h2>Creative42</h2>
+                            <div className="left hero-title-overlay">
+                                <h2 className="hero-page-title">
+                                    <span className="hero-title-line-left">{firstWord}</span>
+                                    {restTitle && <span className="hero-title-line-right">{restTitle}</span>}
+                                </h2>
                             </div>
                             <Link href="/contact" className="theme-btn">
                                 {`Let's Connect`}

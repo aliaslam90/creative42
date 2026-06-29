@@ -389,7 +389,7 @@
 
     .about-hero-sec .hero-inner {
         padding-bottom: 40px;
-        gap: 130px;
+        gap: 0;
     }
 
     .header-menu-wrap .header-right-info a:nth-child(1) {

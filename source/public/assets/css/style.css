@@ -951,19 +951,30 @@ a {
 }
 
 /* # About Hero */
-.about-hero-sec .hero-bottom h2:nth-child(2) {
-    font-style: normal;
-}
-
 .about-hero-sec .hero-bottom h2 {
+    font-style: normal;
+    font-family: var(--font_urbanist);
     font-weight: 400;
-    background-image: linear-gradient(90deg, #ffffff 209.19%, #4d4d4d 123.19%);
+    background-image: linear-gradient(90deg, #ffffff 16%, #4d4d4d 140%);
 }
 
 .about-hero-sec .hero-inner {
-    height: auto;
-    gap: 230px;
-    padding-bottom: 96px;
+    height: calc(100vh + 36px);
+    gap: 0;
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
+.about-hero-sec .hero-page-title {
+    display: flex;
+    justify-content: center;
+    gap: 0.24em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.about-hero-sec .hero-page-title span {
+    display: inline-block;
 }
 
 /* ===== # About ===== */
