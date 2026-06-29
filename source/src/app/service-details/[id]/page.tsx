@@ -1,7 +1,6 @@
 import ContactV1 from '@/components/contact/ContactV1';
 import FaqV1 from '@/components/faq/FaqV1';
 import PartnerV1 from '@/components/partner/PartnerV1';
-import PriceV1 from '@/components/pricing/PriceV1';
 import ServiceDetailsContent from '@/components/services/ServiceDetailsContent';
 import TestimonialV1 from '@/components/testimonial/TestimonialV1';
 import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
@@ -30,7 +29,6 @@ const ServiceDetailsPage = async ({ params }: PageProps) => {
                 <LayoutV3>
                     {data && <ServiceDetailsContent serviceData={data} />}
                     <FaqV1 />
-                    <PriceV1 />
                     <TestimonialV1 />
                     <ContactV1 />
                     <PartnerV1 />
