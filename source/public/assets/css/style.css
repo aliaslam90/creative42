@@ -869,9 +869,7 @@ a {
 }
 
 .hero-sec .hero-bottom h2 {
-    background-image: linear-gradient(90deg, #ffffff 16%, #4d4d4d 140%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
     font-size: clamp(82px, 9vw, 154px);
     line-height: 0.92;
     letter-spacing: -0.04em;
@@ -880,6 +878,10 @@ a {
     font-weight: 300;
     padding: 14px;
     margin: -14px;
+}
+
+.hero-sec .hero-title-accent {
+    color: #c8a244;
 }
 
 .hero-sec .hero-bottom h2:nth-child(2) {

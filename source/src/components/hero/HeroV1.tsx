@@ -45,7 +45,7 @@ const HeroV1 = () => {
                         <div className="hero-bottom">
                             <div className="left hero-title-overlay">
                                 <h2 className="hero-title-line hero-title-line-left">Creativity</h2>
-                                <h2 className="hero-title-line hero-title-line-right">At 42 Degrees</h2>
+                                <h2 className="hero-title-line hero-title-line-right">At <span className="hero-title-accent">42</span> Degrees</h2>
                             </div>
 
                             {/* Button Section */}
