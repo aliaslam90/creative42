@@ -378,6 +378,10 @@
         row-gap: 20px;
     }
 
+    .hero-sec .theme-btn {
+        bottom: 44px;
+    }
+
     .hero-sec .hero-top {
         max-width: 100%;
     }
@@ -708,7 +712,29 @@
 
 @media (max-width: 424px) {
     .hero-sec .hero-inner {
-        height: auto;
+        height: 100svh;
+        min-height: 560px;
+        padding-bottom: 88px;
+    }
+
+    .hero-sec .hero-bottom {
+        min-height: 100%;
+        padding-top: 78px;
+    }
+
+    .hero-sec .hero-bottom h2 {
+        font-size: clamp(42px, 13vw, 56px);
+        line-height: 1;
+        letter-spacing: -0.035em;
+    }
+
+    .about-hero-sec .hero-page-title {
+        gap: 0.18em;
+    }
+
+    .hero-sec .theme-btn {
+        bottom: 28px;
+        white-space: nowrap;
     }
 
     .service-box .service-inner .service-img-box img {

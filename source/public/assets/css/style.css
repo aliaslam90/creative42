@@ -1017,6 +1017,16 @@ a {
     letter-spacing: -0.02em;
 }
 
+.about-sec .about-story .section-title {
+    margin: 0;
+    max-width: 100%;
+    color: var(--primary);
+    font-size: clamp(18px, 1.6vw, 26px);
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
 .about-sec .funfacts-wrap {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
