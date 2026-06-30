@@ -1009,12 +1009,19 @@ a {
     font-weight: 400;
 }
 
-.about-sec .about-story p {
+.about-sec .about-story p,
+.about-sec .about-story-copy p {
     margin: 0;
     color: var(--secondary);
     font-size: clamp(18px, 1.6vw, 26px);
     line-height: 1.45;
     letter-spacing: -0.02em;
+}
+
+.about-sec .about-story-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
 .about-sec .about-story .section-title {
