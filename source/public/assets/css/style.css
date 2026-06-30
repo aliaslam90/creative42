@@ -1447,8 +1447,8 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 60px;
+    align-items: center;
+    gap: 44px;
     width: 100%;
     z-index: 1;
 }
@@ -1503,16 +1503,19 @@ a {
 
 .feature-project {
     background: linear-gradient(180deg, #1f1f1f 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0) 65%, rgb(31, 31, 31) 100%);
-    border-radius: 20px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    height: 98vh;
+    gap: 24px;
+    height: 78vh;
+    max-height: 760px;
+    min-height: 560px;
+    max-width: 1320px;
     width: 100%;
     top: 8px;
     overflow: hidden;
     position: sticky;
-    padding: 12px 12px 30px;
+    padding: 10px 10px 24px;
 }
 
 .feature-project .hover_mouse {
@@ -1527,8 +1530,8 @@ a {
 
 .feature-project .hover_mouse a {
     color: var(--primary);
-    width: 120px;
-    height: 120px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1551,7 +1554,7 @@ a {
     height: auto;
     justify-content: space-between;
     overflow: hidden;
-    padding: 0 28px;
+    padding: 0 22px;
     position: relative;
     width: 100%;
 }
@@ -1706,7 +1709,7 @@ a {
 
 .feature-sec-2 .feature-project .img-box {
     flex: none;
-    height: 668px;
+    height: 520px;
 }
 
 .project-col-2 {
@@ -1724,13 +1727,13 @@ a {
 
 .feature-projects-lists .feature-project-single .img-box {
     border-radius: 16px;
-    height: 494px;
+    height: 420px;
     flex: none;
 }
 
 .feature-projects-lists-two .feature-project-single .img-box {
     border-radius: 16px;
-    height: 494px;
+    height: 420px;
     flex: none;
 }
 
@@ -1748,7 +1751,7 @@ a {
 .feature-projects-lists .feature-project-single:nth-child(10) .img-box,
 .feature-projects-lists .feature-project-single:nth-child(13) .img-box {
     flex: none;
-    height: 668px;
+    height: 520px;
 }
 
 

@@ -75,6 +75,16 @@
         padding-left: 72px;
         padding-right: 72px;
     }
+
+    .feature-project {
+        height: 72vh;
+        max-height: 680px;
+        min-height: 520px;
+    }
+
+    .feature-sec-2 .feature-project .img-box {
+        height: 460px;
+    }
 }
 
 @media (max-width: 1439px) {
