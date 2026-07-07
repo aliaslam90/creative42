@@ -37,7 +37,7 @@ const TeamDetailsContent = ({ memberData }: { memberData: DataType }) => {
                             </ul>
                             <div className="button">
                                 <Link href="/contact" className="theme-btn">
-                                    {`Let's Connect`}
+                                    {`Let's Creative`}
                                     <Image src={btnArrow} alt="icon" />
                                 </Link>
                             </div>

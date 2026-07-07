@@ -1,50 +1,18 @@
 [
-    {
-        "id": 1,
-        "thumb": "client1.svg"
-    },
-    {
-        "id": 2,
-        "thumb": "client2.svg"
-    },
-    {
-        "id": 3,
-        "thumb": "client3.svg"
-    },
-    {
-        "id": 4,
-        "thumb": "client4.svg"
-    },
-    {
-        "id": 5,
-        "thumb": "client5.svg"
-    },
-    {
-        "id": 6,
-        "thumb": "client6.svg"
-    },
-    {
-        "id": 7,
-        "thumb": "client1.svg"
-    },
-    {
-        "id": 8,
-        "thumb": "client2.svg"
-    },
-    {
-        "id": 9,
-        "thumb": "client3.svg"
-    },
-    {
-        "id": 10,
-        "thumb": "client4.svg"
-    },
-    {
-        "id": 11,
-        "thumb": "client5.svg"
-    },
-    {
-        "id": 12,
-        "thumb": "client6.svg"
-    }
+    { "id": 1, "name": "Emirates Red Crescent" },
+    { "id": 2, "name": "CMC Holding" },
+    { "id": 3, "name": "Sky Light Group" },
+    { "id": 4, "name": "Sky Dental Center" },
+    { "id": 5, "name": "Zircon Medical Equipment" },
+    { "id": 6, "name": "Al Manal Dental Center" },
+    { "id": 7, "name": "Al Najah Dental Lab" },
+    { "id": 8, "name": "Canadian Medical Center" },
+    { "id": 9, "name": "Emirates Red Crescent" },
+    { "id": 10, "name": "CMC Holding" },
+    { "id": 11, "name": "Sky Light Group" },
+    { "id": 12, "name": "Sky Dental Center" },
+    { "id": 13, "name": "Zircon Medical Equipment" },
+    { "id": 14, "name": "Al Manal Dental Center" },
+    { "id": 15, "name": "Al Najah Dental Lab" },
+    { "id": 16, "name": "Canadian Medical Center" }
 ]

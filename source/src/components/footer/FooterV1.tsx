@@ -52,12 +52,12 @@ const FooterV1 = () => {
                                                 <a data-aos="slide-up" data-aos-duration={700} href="/contact" className="with-border">Book a creative consultation</a>
                                             </div>
                                             <div className="split-text-anim">
-                                                <a data-aos="slide-up" data-aos-duration={700} href="mailto:info@creative42.ai" className="with-border">info@creative42.ai</a>
+                                                <a data-aos="slide-up" data-aos-duration={700} href="mailto:hello@creative42.ai" className="with-border">hello@creative42.ai</a>
                                             </div>
                                         </div>
                                     </div>
                                     <Link href="/contact" className="theme-btn">
-                                        {`Let's Connect`}
+                                        {`Let's Creative`}
                                         <Image src={btnArrow} alt="icon" />
                                     </Link>
                                 </div>

@@ -33,10 +33,7 @@ const HeaderMenu = () => {
 
                         {/* Header right info */}
                         <div className="header-right-info">
-                            <a className="with-border" href="mailto:info@creative42.ai">info@creative42.ai</a>
-                            <a href="mailto:info@creative42.ai">
-                                <i className="iconoir-mail-out" />
-                            </a>
+                            <Link href="/contact" className="header-cta">Inquiry Now</Link>
                         </div>
                     </div>
                 </div>

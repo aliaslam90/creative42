@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "icon": "iconoir-palette",
+        "label": "Branding",
+        "title": "Built around a sharper angle.",
+        "description": "Strategic brand foundations, stories, names, messaging, identity systems, and positioning work shaped around a clear Creative42 angle.",
+        "tags": ["Brand Strategy", "Brand Positioning", "Brand Audits", "Naming & Taglines", "Messaging & Tone", "Identity Systems"]
+    },
+    {
+        "id": 2,
+        "icon": "iconoir-app-window",
+        "label": "UI/UX Design",
+        "title": "Clear by design, not by luck.",
+        "description": "Interfaces, flows, and experiences designed around real user behaviour, not assumptions. Every screen is built to make products easier to use and simpler to navigate.",
+        "tags": ["UX/UI", "User Journey Mapping", "Wireframing & Prototyping", "Design Systems", "Usability Testing"]
+    },
+    {
+        "id": 3,
+        "icon": "iconoir-edit-pencil",
+        "label": "Content Creation",
+        "title": "Every word on angle.",
+        "description": "Copy, stories, and content systems that carry the Creative42 angle across every touchpoint, from brand messaging to campaign content and everyday communication.",
+        "tags": ["Copywriting", "Brand Stories", "Content Strategy", "Publications", "Editorial Content"]
+    },
+    {
+        "id": 4,
+        "icon": "iconoir-code-brackets",
+        "label": "Web Development & App Development",
+        "title": "Products that actually work.",
+        "description": "Website design and build, from concept through to a fully working site, focused on clarity, performance, and a smooth path from visitor to customer.",
+        "tags": ["Website Design & Build", "UX/UI Integration", "Performance Optimisation", "Responsive Design"]
+    },
+    {
+        "id": 5,
+        "icon": "iconoir-share-android",
+        "label": "Social Media Services",
+        "title": "Consistent, everywhere you show up.",
+        "description": "Social content and channel management built around a consistent voice and identity, so every post looks and sounds like Creative42.",
+        "tags": ["Social Media Management", "Content Calendars", "Community Engagement", "Social Creative"]
+    },
+    {
+        "id": 6,
+        "icon": "iconoir-video-camera",
+        "label": "Media Production",
+        "title": "Visuals worth stopping for.",
+        "description": "Photography, video, and visual assets produced to support brand, campaign, and social work, keeping every asset consistent with the wider identity.",
+        "tags": ["Photography", "Videography", "Visual Assets", "Post-Production"]
+    },
+    {
+        "id": 7,
+        "icon": "iconoir-graph-up",
+        "label": "Digital Marketing",
+        "title": "Found by the right people.",
+        "description": "Marketing solutions seen from a smarter, sharper, and more original angle, planned around your brand and audience rather than generic templates.",
+        "tags": ["Digital Strategy", "Campaign Planning", "Performance Marketing", "Analytics & Reporting"]
+    }
+]

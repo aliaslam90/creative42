@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "thumb": "creative42-project-identity.jpg",
+        "thumb2": "creative42-project-web.jpg",
+        "title": "CMC Holding",
+        "subtitle": "Digital Transformation & Brand Experience",
+        "tags": ["Digital Transformation", "Branding", "Website", "Digital Marketing"],
+        "year": "2025",
+        "description": "We led CMC Holding's digital transformation end-to-end, covering branding, content, website, digital marketing, and social media under one connected strategy."
+    },
+    {
+        "id": 2,
+        "thumb": "creative42-project-web.jpg",
+        "thumb2": "creative42-project-growth.jpg",
+        "title": "Canadian Medical Center",
+        "subtitle": "Full-Service Patient Experience",
+        "tags": ["Branding", "Website", "Media Production", "CRM"],
+        "year": "2026",
+        "description": "A full-service build for Canadian Medical Center spanning branding, content, website, digital marketing, social media, media production, call center, and CRM."
+    },
+    {
+        "id": 3,
+        "thumb": "creative42-project-ui.jpg",
+        "thumb2": "creative42-project-brand-system.jpg",
+        "title": "Sky Dental Center",
+        "subtitle": "Complete Digital Patient Journey",
+        "tags": ["Branding", "UI/UX Design", "Website Development", "Digital Marketing"],
+        "year": "2025",
+        "description": "We delivered branding, content, UI/UX design, website development, social media, media production, and digital marketing for Sky Dental Center."
+    },
+    {
+        "id": 4,
+        "thumb": "creative42-project-brand-system.jpg",
+        "thumb2": "creative42-project-launch.jpg",
+        "title": "Al Manal Dental Center",
+        "subtitle": "Full-Service Dental Brand Experience",
+        "tags": ["Branding", "UI/UX Design", "Website Development", "Media Production"],
+        "year": "2026",
+        "description": "A complete digital presence for Al Manal Dental Center, covering branding, content, UI/UX design, website development, social media, media production, and digital marketing."
+    },
+    {
+        "id": 5,
+        "thumb": "creative42-project-launch.jpg",
+        "thumb2": "creative42-project-identity.jpg",
+        "title": "Zircon Medical Equipment",
+        "subtitle": "Brand & Digital Presence",
+        "tags": ["Branding", "UI/UX Design", "Website Development", "Social Media"],
+        "year": "2025",
+        "description": "We built Zircon Medical Equipment's brand and digital presence, covering branding, content creation, UI/UX design, website development, and social media services."
+    },
+    {
+        "id": 6,
+        "thumb": "creative42-project-growth.jpg",
+        "thumb2": "creative42-project-ui.jpg",
+        "title": "Sky Light Group",
+        "subtitle": "Brand & Web Experience",
+        "tags": ["Branding", "Content Creation", "Website"],
+        "year": "2026",
+        "description": "Branding, content creation, and website development delivered for Sky Light Group's digital presence."
+    }
+]

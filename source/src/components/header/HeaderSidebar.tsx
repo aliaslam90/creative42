@@ -59,7 +59,7 @@ const HeaderSidebar = () => {
                         <ul>
                             <li>
                                 <span>Based in the UAE,</span>
-                                <a href="mailto:info@creative42.ai">E: info@creative42.ai</a>
+                                <a href="mailto:hello@creative42.ai">E: hello@creative42.ai</a>
                             </li>
                             <li>
                                 <span>Serving ambitious brands</span>
@@ -73,6 +73,7 @@ const HeaderSidebar = () => {
                         <ul className="menu" id="sidebar-menu-id">
                             <li><a href="/" onClick={handleCloseClick}>Home</a></li>
                             <li><a href="/about" onClick={handleCloseClick}>About Us</a></li>
+                            <li><a href="/#services" onClick={handleCloseClick}>Services</a></li>
                             <li><a href="/projects" onClick={handleCloseClick}>Projects</a></li>
                             <li><a href="/contact" onClick={handleCloseClick}>Contact Us</a></li>
                         </ul>

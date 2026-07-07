@@ -12,12 +12,12 @@ import '@/assets/css/style.css';
 import '@/assets/css/responsive.css';
 
 import type { Metadata } from "next";
-import { Arapey, Urbanist } from 'next/font/google'
+import { Playfair_Display, Urbanist } from 'next/font/google'
 import { ToastContainer } from 'react-toastify';
 import Dependency from '@/components/utilities/Dependency';
 
-const arapey = Arapey({
-  weight: ["400"],
+const playfairDisplay = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: 'swap'
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${arapey.className} ${urbanist.className}`}>
+      <body className={`${playfairDisplay.className} ${urbanist.className}`}>
         <ToastContainer />
         <Dependency />
         {children}

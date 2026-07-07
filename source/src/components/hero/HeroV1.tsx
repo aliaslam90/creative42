@@ -2,57 +2,52 @@
 import btnArrowIcon from "@/assets/images/btn-arrow.svg"
 import Image from 'next/image';
 import Link from 'next/link';
-import { CSSProperties, useEffect, useState } from "react";
+import FactData from "@/assets/jsonData/fact/FactData.json";
+
+const heroStatIcons: Record<number, string> = {
+    1: "iconoir-star",
+    2: "iconoir-flash",
+    3: "iconoir-check-circle",
+};
 
 const HeroV1 = () => {
-
-    const [isClient, setIsClient] = useState(false);
-    const [scrollShift, setScrollShift] = useState(0);
-
-    useEffect(() => {
-        setIsClient(true);
-
-        const handleScroll = () => {
-            setScrollShift(Math.min(window.scrollY * 0.18, 120));
-        };
-
-        handleScroll();
-        window.addEventListener("scroll", handleScroll, { passive: true });
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <>
             <div
-                className="hero-sec"
+                className="hero-sec home-hero-sec"
                 id="hero"
-                style={{ "--hero-scroll-shift": `${scrollShift}px` } as CSSProperties}
             >
                 <div className="custom-container">
-                    <div className="hero-inner">
+                    <div className="hero-inner home-hero-inner">
 
-                        {/* Video Section */}
-                        <div className="hero-video">
-                            {isClient && (
-                                <video loop muted autoPlay>
-                                    <source src="/assets/video/hero-video.mp4" type="video/mp4" />
-                                </video>
-                            )}
-                        </div>
-
-                        {/* Hero Bottom Section */}
-                        <div className="hero-bottom">
+                        <div className="home-hero-content">
                             <div className="left hero-title-overlay">
-                                <h2 className="hero-title-line hero-title-line-left">Creativity</h2>
+                                <h2 className="hero-title-line hero-title-line-left hero-title-soft">Creativity</h2>
                                 <h2 className="hero-title-line hero-title-line-right">At <span className="hero-title-accent">42</span> Degrees</h2>
                             </div>
 
-                            {/* Button Section */}
-                            <Link href="/contact" className="theme-btn">
-                                {`Let's Connect`}
-                                <Image src={btnArrowIcon} alt="icon" />
-                            </Link>
+                            <p className="home-hero-desc">
+                                {`Creativity is not linear, it is angular. At Creative42.ai, we deliver marketing solutions seen from a smarter, sharper, and more original angle.`}
+                            </p>
+
+                            <div className="home-hero-stats">
+                                <span className="home-hero-stat">
+                                    <i className="iconoir-calendar" />
+                                    <strong>20+</strong> Years in the Industry
+                                </span>
+                                {FactData.slice(0, 3).map(fact => (
+                                    <span className="home-hero-stat" key={fact.id}>
+                                        <i className={heroStatIcons[fact.id]} />
+                                        <strong>{fact.end}+</strong> {fact.title}
+                                    </span>
+                                ))}
+
+                                <Link href="/contact" className="theme-btn">
+                                    {`Let's Creative`}
+                                    <Image src={btnArrowIcon} alt="icon" />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

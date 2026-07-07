@@ -62,7 +62,7 @@ const HeaderV3 = () => {
                         <ul>
                             <li>
                                 <span>Based in the UAE,</span>
-                                <a href="mailto:info@creative42.ai">E: info@creative42.ai</a>
+                                <a href="mailto:hello@creative42.ai">E: hello@creative42.ai</a>
                             </li>
                             <li>
                                 <span>Serving ambitious brands</span>
@@ -111,7 +111,7 @@ const HeaderV3 = () => {
                         <ul>
                             <li>
                                 <span>Based in the UAE,</span>
-                                <a href="mailto:info@creative42.ai">E: info@creative42.ai</a>
+                                <a href="mailto:hello@creative42.ai">E: hello@creative42.ai</a>
                             </li>
                             <li>
                                 <span>Serving ambitious brands</span>
@@ -166,8 +166,8 @@ const HeaderV3 = () => {
 
                         {/* Header right info */}
                         <div className="header-right-info">
-                            <a className="with-border" href="mailto:info@creative42.ai">info@creative42.ai</a>
-                            <a href="mailto:info@creative42.ai">
+                            <a className="with-border" href="mailto:hello@creative42.ai">hello@creative42.ai</a>
+                            <a href="mailto:hello@creative42.ai">
                                 <i className="iconoir-mail-out" />
                             </a>
                         </div>

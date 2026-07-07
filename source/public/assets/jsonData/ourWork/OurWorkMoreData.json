@@ -1,0 +1,23 @@
+[
+    { "id": 1, "name": "Al Najah Technology Dental Lab" },
+    { "id": 2, "name": "EDG Group" },
+    { "id": 3, "name": "EDG General Trading" },
+    { "id": 4, "name": "EDG General Trading LTD" },
+    { "id": 5, "name": "EDG Gold & Petroleum DMCC" },
+    { "id": 6, "name": "SAAD Energy" },
+    { "id": 7, "name": "Zenon Medical Clinic" },
+    { "id": 8, "name": "Peak Pursuit" },
+    { "id": 9, "name": "GYM Clothing Co." },
+    { "id": 10, "name": "KEO International Consultant" },
+    { "id": 11, "name": "PLAYO Sport Platform", "href": "https://playo.co" },
+    { "id": 12, "name": "C-QUEST Consultant", "href": "https://www.c-quest.com" },
+    { "id": 13, "name": "SAP · Stand Graphics" },
+    { "id": 14, "name": "SAP · Hello Wien Kit" },
+    { "id": 15, "name": "EGA · National Day Event" },
+    { "id": 16, "name": "EGA · Spirit of Union Event" },
+    { "id": 17, "name": "EGA · Wetex Stand Design" },
+    { "id": 18, "name": "Mubadala Energy · National Day Event" },
+    { "id": 19, "name": "KEO International · Sustainability Report" },
+    { "id": 20, "name": "KEO International · Capability Statement" },
+    { "id": 21, "name": "FMTECH · Capability Statement" }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "front": "Your brand doesn't reflect the quality of your product.",
+        "back": "We build strategic brand foundations, stories, and identity systems shaped around a clear angle, so your brand finally matches the quality of what you deliver."
+    },
+    {
+        "id": 2,
+        "front": "Users are leaving your product before they convert.",
+        "back": "We design clear UX/UI and communication systems that guide users smoothly from first click to conversion."
+    },
+    {
+        "id": 3,
+        "front": "Your website gets visitors, but not enough of them become customers.",
+        "back": "We design and build websites focused on conversion, not just traffic, turning visitors into paying customers."
+    },
+    {
+        "id": 4,
+        "front": "You have a product idea but no clear path to building it.",
+        "back": "We combine strategy, branding, and design to take your idea from concept to a fully built, market-ready product."
+    }
+]

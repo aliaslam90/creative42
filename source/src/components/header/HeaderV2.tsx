@@ -33,8 +33,8 @@ const HeaderV2 = () => {
 
                         {/* Header right info */}
                         <div className="header-right-info">
-                            <a className="with-border" href="mailto:info@creative42.ai">info@creative42.ai</a>
-                            <a href="mailto:info@creative42.ai">
+                            <a className="with-border" href="mailto:hello@creative42.ai">hello@creative42.ai</a>
+                            <a href="mailto:hello@creative42.ai">
                                 <i className="iconoir-mail-out" />
                             </a>
                         </div>
