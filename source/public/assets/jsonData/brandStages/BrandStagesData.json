@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "number": "01",
+        "title": "Brand Strategy",
+        "subtitle": "Purpose Unlocked",
+        "image": "service-single1-1.jpg",
+        "description": "Anchor your strategy in authentic purpose, vision, and values to align your promises with your actions, closing the gap between what you say and what you do, and strengthening your market presence.",
+        "elements": [
+            "Research & Insights",
+            "Purpose System (Purpose, Vision, & Values)",
+            "Audience",
+            "Archetype",
+            "Positioning",
+            "Differentiator"
+        ]
+    },
+    {
+        "id": 2,
+        "number": "02",
+        "title": "Brand Identity",
+        "subtitle": "Purpose Expressed",
+        "image": "service-single2-1.jpg",
+        "description": "Branding is more than logos, it's a promise. Craft a consistent visual and verbal identity that doesn't just stand out but truly resonates, making every interaction a reflection of your brand's core purpose.",
+        "elements": [
+            "Naming & Nomenclature",
+            "Creative Territories",
+            "Visual Identity",
+            "Verbal Identity",
+            "Brand Guidelines"
+        ]
+    },
+    {
+        "id": 3,
+        "number": "03",
+        "title": "Brand Activation",
+        "subtitle": "Purpose In Action",
+        "image": "service-single3-1.jpg",
+        "description": "The market remembers brands that act. Implement behaviours that reflect your promises, build trust, foster loyalty, and drive meaningful growth, all anchored in your brand's core purpose.",
+        "elements": [
+            "Go-to-Market Plan & Execution",
+            "Website Design & Development",
+            "Key Asset Design + Production",
+            "Campaigns",
+            "Packaging",
+            "Customer Journey",
+            "Social Impact & Sustainability"
+        ]
+    }
+]

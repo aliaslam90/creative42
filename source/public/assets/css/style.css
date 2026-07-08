@@ -4682,3 +4682,549 @@ a.our-work-more-item i {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== # Branding Engagements ===== */
+.branding-eng-sec {
+    background: #ffffff;
+    padding: 130px 0 90px;
+}
+
+.branding-eng-top {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    margin-bottom: 100px;
+}
+
+.branding-eng-heading {
+    margin: 0;
+    color: #0d0d0d;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    font-size: clamp(48px, 6.5vw, 96px);
+}
+
+.branding-eng-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 12px;
+}
+
+.branding-eng-desc p {
+    margin: 0;
+    color: #45454d;
+    font-size: 16px;
+    line-height: 1.75;
+    font-family: var(--font_urbanist);
+}
+
+.branding-eng-stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.branding-eng-number {
+    display: block;
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-family: var(--font_urbanist);
+}
+
+.branding-eng-stage h3 {
+    margin: 0 0 10px;
+    color: #0d0d0d;
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.branding-eng-subtitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-weight: 600;
+    color: #767680;
+    font-family: var(--font_urbanist);
+}
+
+.branding-eng-divider {
+    border-top: 1px solid #e2e2e6;
+}
+
+@media (max-width: 991px) {
+    .branding-eng-top {
+        grid-template-columns: 1fr;
+    }
+
+    .branding-eng-stages {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* ===== # Brand Stages ===== */
+.brand-stages-sec {
+    background: #ffffff;
+}
+
+.brand-stage-row {
+    padding: 90px 0;
+    border-top: 1px solid #ececec;
+}
+
+.brand-stage-row:nth-child(even) {
+    background: #fafaf9;
+}
+
+.brand-stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.brand-stage-row-reverse .brand-stage-grid {
+    grid-template-columns: 0.85fr 1fr;
+}
+
+.brand-stage-row-reverse .brand-stage-content {
+    order: 2;
+}
+
+.brand-stage-row-reverse .brand-stage-media {
+    order: 1;
+}
+
+.brand-stage-number {
+    display: block;
+    color: #7bd99a;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    font-family: var(--font_urbanist);
+}
+
+.brand-stage-content h3 {
+    margin: 0 0 24px;
+    line-height: 1;
+}
+
+.brand-stage-title {
+    display: block;
+    color: #0d0d0d;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(34px, 4vw, 56px);
+    margin-bottom: 6px;
+}
+
+.brand-stage-subtitle {
+    display: block;
+    color: #0d0d0d;
+    font-family: var(--font_urbanist);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: clamp(30px, 4.2vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+}
+
+.brand-stage-content > p {
+    max-width: 520px;
+    color: #45454d;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 32px;
+    font-family: var(--font_urbanist);
+}
+
+.brand-stage-elements-label {
+    display: block;
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 14px;
+    font-family: var(--font_urbanist);
+}
+
+.brand-stage-elements ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brand-stage-elements ul li {
+    position: relative;
+    padding-left: 18px;
+    color: #45454d;
+    font-size: 15px;
+    font-family: var(--font_urbanist);
+}
+
+.brand-stage-elements ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #0d0d0d;
+}
+
+.brand-stage-media {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.brand-stage-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .brand-stage-grid,
+    .brand-stage-row-reverse .brand-stage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-stage-row-reverse .brand-stage-content,
+    .brand-stage-row-reverse .brand-stage-media {
+        order: initial;
+    }
+
+    .brand-stage-media {
+        order: -1;
+        margin-bottom: 40px;
+    }
+
+    .brand-stage-row {
+        padding: 60px 0;
+    }
+}
+
+/* ===== # Our Approach ===== */
+.our-approach-sec {
+    background: #000000;
+    padding: 140px 0;
+    overflow: hidden;
+}
+
+.our-approach-header {
+    max-width: 720px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.our-approach-eyebrow {
+    display: inline-block;
+    color: #c8a244;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    font-family: var(--font_urbanist);
+}
+
+.our-approach-header h2 {
+    margin: 0 0 24px;
+    color: var(--primary);
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.our-approach-header p {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 1.75;
+    font-family: var(--font_urbanist);
+}
+
+.approach-pillars {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1040px;
+    margin: 0 auto 88px;
+    padding-bottom: 64px;
+}
+
+.approach-pillars-line {
+    position: absolute;
+    left: 16.66%;
+    right: 16.66%;
+    top: 44px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(200, 162, 68, 0), rgba(200, 162, 68, 0.55) 50%, rgba(200, 162, 68, 0));
+    z-index: 0;
+}
+
+.approach-pillar {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.approach-pillar-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #101014;
+    border: 1px solid rgba(200, 162, 68, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.approach-pillar-icon i {
+    font-size: 32px;
+    color: #c8a244;
+}
+
+.approach-pillar h3 {
+    margin: 0 0 8px;
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.approach-pillar-subtitle {
+    display: block;
+    color: var(--secondary);
+    font-size: 14px;
+    font-family: var(--font_urbanist);
+}
+
+.approach-sweetspot {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: rgba(200, 162, 68, 0.1);
+    border: 1px solid rgba(200, 162, 68, 0.4);
+    color: #c8a244;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font_urbanist);
+}
+
+.approach-sweetspot-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c8a244;
+}
+
+.approach-process {
+    max-width: 1040px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 64px;
+}
+
+.approach-process-label {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 56px;
+    font-family: var(--font_urbanist);
+}
+
+.approach-phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.approach-phase {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.approach-phase-connector {
+    position: absolute;
+    top: 40px;
+    left: calc(50% + 60px);
+    width: calc(100% - 60px);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.approach-phase-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.approach-phase-ring-inner {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 16px;
+    font-family: var(--font_urbanist);
+}
+
+.approach-phase h4 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.approach-phase p {
+    margin: 0;
+    max-width: 260px;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    font-family: var(--font_urbanist);
+}
+
+@media (max-width: 991px) {
+    .approach-pillars,
+    .approach-phases {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .approach-pillars-line {
+        display: none;
+    }
+
+    .approach-sweetspot {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 8px auto 0;
+    }
+
+    .approach-phase-connector {
+        display: none;
+    }
+
+    .our-approach-header {
+        margin-bottom: 64px;
+    }
+}
+
+/* ===== # Reach Out ===== */
+.reach-out-sec {
+    background: #ffffff;
+    padding: 160px 0;
+    text-align: center;
+}
+
+.reach-out-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 40px;
+}
+
+.reach-out-heading-strong {
+    color: #0d0d0d;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    font-size: clamp(34px, 5.2vw, 68px);
+}
+
+.reach-out-heading-script {
+    color: #0d0d0d;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.05;
+    font-size: clamp(46px, 7vw, 96px);
+}
+
+.reach-out-desc {
+    max-width: 640px;
+    margin: 0 auto 48px;
+    color: #6b6b74;
+    font-size: 16px;
+    line-height: 1.75;
+    font-family: var(--font_urbanist);
+}
+
+.reach-out-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0d0d0d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 18px 34px;
+    border-radius: 999px;
+    font-family: var(--font_urbanist);
+    transition: 0.3s;
+}
+
+.reach-out-btn:hover {
+    background: #c8a244;
+    color: #0d0d0d;
+}
+
+@media (max-width: 575px) {
+    .reach-out-sec {
+        padding: 96px 0;
+    }
+}
