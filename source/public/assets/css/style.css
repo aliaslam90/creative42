@@ -323,17 +323,36 @@ a {
 
 /*==== # Header ====*/
 .header-menu-wrap {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     top: 0;
     z-index: 1024;
     background: #0d0d0d;
     padding: 8px 0;
+    transition: padding 0.35s ease, background 0.35s ease;
 }
 
 .header-menu-wrap .custom-container {
     max-width: 1296px;
+    transition: max-width 0.35s ease, background 0.35s ease, border-radius 0.35s ease,
+        box-shadow 0.35s ease, border-color 0.35s ease, padding 0.35s ease;
+}
+
+.header-menu-wrap.is-scrolled {
+    background: transparent;
+    padding: 16px 0;
+}
+
+.header-menu-wrap.is-scrolled .custom-container {
+    max-width: 1040px;
+    background: rgba(32, 32, 36, 0.75);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    padding: 6px 12px 6px 28px;
 }
 
 .header-menu-wrap .custom-container .custom-row {

@@ -1,11 +1,26 @@
+"use client";
 import Link from 'next/link';
 import logoCreative from "@/assets/images/logocreative.png"
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const HeaderMenu = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 40);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <>
-            <header className="header-menu-wrap">
+            <header className={`header-menu-wrap ${isScrolled ? "is-scrolled" : ""}`}>
                 <div className="custom-container">
                     <div className="custom-row">
 
