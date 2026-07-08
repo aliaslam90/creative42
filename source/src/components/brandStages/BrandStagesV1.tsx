@@ -30,6 +30,7 @@ const BrandStagesV1 = () => {
 
                             <div className="brand-stage-media">
                                 <Image
+                                    loading="lazy"
                                     src={`/assets/images/${stage.image}`}
                                     alt={stage.title}
                                     width={900}

@@ -45,7 +45,7 @@ const HeroV1 = () => {
 
                                 <Link href="/contact" className="theme-btn">
                                     {`Let's Creative`}
-                                    <Image src={btnArrowIcon} alt="icon" />
+                                    <Image loading="lazy" src={btnArrowIcon} alt="icon" />
                                 </Link>
                             </div>
                         </div>

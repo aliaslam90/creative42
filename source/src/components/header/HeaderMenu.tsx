@@ -25,7 +25,7 @@ const HeaderMenu = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={logoCreative} alt="Creative42 logo" />
+                            <Image src={logoCreative} alt="Creative42 logo" priority />
                         </Link>
 
                         {/* Navigation menu */}

@@ -41,7 +41,7 @@ const ContactV1 = () => {
                                 <div className="input-group">
                                     <button type="submit" className="theme-btn">
                                         Send Message
-                                        <Image src={btnArrow} alt="icon" />
+                                        <Image loading="lazy" src={btnArrow} alt="icon" />
                                     </button>
                                 </div>
                             </form>
@@ -50,7 +50,7 @@ const ContactV1 = () => {
                     </div>
                     <div className="right">
                         <div className="img-box">
-                            <Image src={contactThumb} alt="contact-img" />
+                            <Image loading="lazy" src={contactThumb} alt="contact-img" />
                         </div>
                     </div>
                 </div>

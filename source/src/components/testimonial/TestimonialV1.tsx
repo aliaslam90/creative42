@@ -9,7 +9,7 @@ const TestimonialV1 = () => {
             <div className="testimonial-sec">
                 <div className="section-header">
                     <span className="section-subtitle">
-                        <Image src={Union} alt="icon" />
+                        <Image loading="lazy" src={Union} alt="icon" />
                         OUR REVIEWS
                     </span>
                 </div>

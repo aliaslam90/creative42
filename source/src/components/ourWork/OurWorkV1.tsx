@@ -40,7 +40,7 @@ const OurWorkV1 = () => {
                                             <span />
                                         </div>
                                         <div className="our-work-browser-image">
-                                            <Image src={`/assets/images/${project.thumb}`} alt={project.title} width={800} height={520} />
+                                            <Image loading="lazy" src={`/assets/images/${project.thumb}`} alt={project.title} width={800} height={520} />
                                         </div>
                                     </div>
                                     <div className="our-work-laptop-base">
@@ -50,7 +50,7 @@ const OurWorkV1 = () => {
 
                                 <div className="our-work-side">
                                     <div className="our-work-side-image">
-                                        <Image src={`/assets/images/${project.thumb2}`} alt={project.title} width={420} height={220} />
+                                        <Image loading="lazy" src={`/assets/images/${project.thumb2}`} alt={project.title} width={420} height={220} />
                                     </div>
                                     <div className="our-work-side-desc">
                                         <p>{project.description}</p>

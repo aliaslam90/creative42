@@ -54,7 +54,7 @@ const HeaderSidebar = () => {
                     </span>
 
                     {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" />
+                    <Image loading="lazy" src={sidebarbg} alt="sidebar" className="sidebar-shape" />
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
