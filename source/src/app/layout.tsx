@@ -14,6 +14,7 @@ import '@/assets/css/responsive.css';
 import type { Metadata } from "next";
 import { Playfair_Display, Urbanist } from 'next/font/google'
 import { ToastContainer } from 'react-toastify';
+import ChatWidgetV1 from '@/components/chatWidget/ChatWidgetV1';
 import Dependency from '@/components/utilities/Dependency';
 
 const playfairDisplay = Playfair_Display({
@@ -45,6 +46,7 @@ export default function RootLayout({
         <ToastContainer />
         <Dependency />
         {children}
+        <ChatWidgetV1 />
       </body>
     </html>
   );
