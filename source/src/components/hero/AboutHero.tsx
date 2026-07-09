@@ -10,7 +10,6 @@ interface DataType {
 }
 
 const HeroV2 = ({ title }: DataType) => {
-    const [isClient, setIsClient] = useState(false);
     const [scrollShift, setScrollShift] = useState(0);
     const pageTitle = title ? title : "Not Found";
     const titleWords = pageTitle.split(" ");
@@ -18,8 +17,6 @@ const HeroV2 = ({ title }: DataType) => {
     const restTitle = titleWords.slice(1).join(" ");
 
     useEffect(() => {
-        setIsClient(true);
-
         const handleScroll = () => {
             setScrollShift(Math.min(window.scrollY * 0.18, 120));
         };
@@ -33,27 +30,16 @@ const HeroV2 = ({ title }: DataType) => {
     return (
         <>
             <div
-                className="hero-sec about-hero-sec"
+                className="hero-sec home-hero-sec inner-page-hero-sec"
                 id="hero"
                 style={{ "--hero-scroll-shift": `${scrollShift}px` } as CSSProperties}
             >
                 <div className="custom-container">
-                    <div className="hero-inner">
-
-                        <div className="hero-video">
-                            {isClient && (
-                                <video loop muted autoPlay>
-                                    <source src="/assets/video/hero-video.mp4" type="video/mp4" />
-                                </video>
-                            )}
-                        </div>
-
-                        <div className="hero-bottom">
+                    <div className="hero-inner home-hero-inner">
+                        <div className="home-hero-content">
                             <div className="left hero-title-overlay">
-                                <h2 className="hero-page-title">
-                                    <span className="hero-title-line-left">{firstWord}</span>
-                                    {restTitle && <span className="hero-title-line-right">{restTitle}</span>}
-                                </h2>
+                                <h2 className="hero-title-line hero-title-line-left hero-title-soft">{firstWord}</h2>
+                                {restTitle && <h2 className="hero-title-line hero-title-line-right">{restTitle}</h2>}
                             </div>
                             <Link href="/contact" className="theme-btn">
                                 {`Let's Creative`}
