@@ -107,10 +107,6 @@
         margin-right: 66px;
     }
 
-    .header-menu-wrap .navbar>ul>li:not(.dropdown-menu-item) {
-        display: none;
-    }
-
     .section-header .section-subtitle {
         width: 100%;
     }
@@ -776,6 +772,24 @@
         transform: none;
         transition-delay: 0s;
         opacity: 1;
+    }
+
+    .header-menu-wrap .navbar>ul>li:not(.dropdown-menu-item) {
+        display: none;
+    }
+
+    .scroll-to-show-menu {
+        display: block;
+    }
+
+    .hamburg-menu {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 992px) {
+    .scroll-to-show-menu {
+        display: none;
     }
 }
 

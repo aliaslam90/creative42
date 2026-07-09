@@ -46,26 +46,39 @@ const ProblemsV1 = () => {
                 };
             });
 
+            // Start with the heading alone: cards hidden in the center stack.
             gsap.set(cards, {
                 x: (i) => offsets[i].x,
-                y: (i) => offsets[i].y,
+                y: (i) => offsets[i].y + 40,
                 rotate: (i) => offsets[i].rotate,
+                opacity: 0,
             });
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: pinRef.current,
                     start: "top top",
-                    end: "+=130%",
+                    end: "+=220%",
                     scrub: 1,
                     pin: true,
                     anticipatePin: 1,
                 },
             });
 
+            // 1. Heading fades into the background.
             tl.to(headingRef.current, { opacity: 0.12, duration: 1 }, 0)
-                .to(cards, { x: 0, y: 0, rotate: 0, stagger: 0.12, duration: 1, ease: "power2.out" }, 0)
-                .to(inners, { rotateY: 180, stagger: 0.12, duration: 1, ease: "power2.inOut" }, 1.1);
+                // 2. Cards appear one by one onto the center stack.
+                .to(cards, {
+                    opacity: 1,
+                    y: (i) => offsets[i].y,
+                    stagger: 0.45,
+                    duration: 0.5,
+                    ease: "power2.out",
+                }, 0.5)
+                // 3. Stack spreads evenly into the grid.
+                .to(cards, { x: 0, y: 0, rotate: 0, stagger: 0.1, duration: 1, ease: "power2.inOut" }, 2.7)
+                // 4. Cards flip to reveal the solution side.
+                .to(inners, { rotateY: 180, stagger: 0.12, duration: 1, ease: "power2.inOut" }, 4.1);
 
             return () => {
                 tl.scrollTrigger?.kill();

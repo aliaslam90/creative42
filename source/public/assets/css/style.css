@@ -328,9 +328,13 @@ a {
     width: 100%;
     top: 0;
     z-index: 1024;
-    background: #0d0d0d;
+    background: #ffffff;
     padding: 8px 0;
     transition: padding 0.35s ease, background 0.35s ease;
+}
+
+.header-menu-wrap .logo img {
+    filter: brightness(0);
 }
 
 .header-menu-wrap .custom-container {
@@ -346,12 +350,12 @@ a {
 
 .header-menu-wrap.is-scrolled .custom-container {
     max-width: 1040px;
-    background: rgba(32, 32, 36, 0.75);
+    background: rgba(255, 255, 255, 0.82);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 999px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
     padding: 6px 12px 6px 28px;
 }
 
@@ -410,7 +414,7 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #ffffff;
+    background: #0d0d0d;
     opacity: 0;
     transition: 0.4s;
     -webkit-transition: 0.4s;
@@ -422,7 +426,7 @@ a {
 }
 
 .header-menu-wrap .navbar .menu li a:hover {
-    color: var(--primary);
+    color: #0d0d0d;
 }
 
 .header-menu-wrap .navbar .menu li {
@@ -508,8 +512,8 @@ a {
 
 .header-menu-wrap .header-right-info .header-cta {
     display: block;
-    color: #000000;
-    background: #ffffff;
+    color: #ffffff;
+    background: #0d0d0d;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -1063,6 +1067,17 @@ a {
     left: auto;
     bottom: auto;
     transform: none;
+}
+
+@media (max-width: 575px) {
+    .home-hero-sec .hero-title-line {
+        font-size: clamp(34px, 12vw, 56px);
+    }
+
+    .home-hero-sec .hero-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @keyframes heroTitleFromLeft {
@@ -4142,9 +4157,14 @@ a {
         padding: 100px 0 60px;
     }
 
+    .problems-pin .custom-container {
+        flex-direction: column;
+    }
+
     .problems-heading {
         position: static;
         transform: none;
+        width: 100%;
         margin-bottom: 48px;
     }
 
