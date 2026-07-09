@@ -17,7 +17,19 @@ const OurWorkV1 = () => {
                     {OurWorkFeaturedData.map((project) => (
                         <div className="our-work-card" key={project.id}>
                             <div className="our-work-card-top">
-                                <h3>{project.title} <span>– {project.subtitle}</span></h3>
+                                <div className="our-work-card-title">
+                                    {project.logo && (
+                                        <Image
+                                            loading="lazy"
+                                            src={`/assets/images/${project.logo}`}
+                                            alt={`${project.title} logo`}
+                                            width={140}
+                                            height={48}
+                                            className="our-work-card-logo"
+                                        />
+                                    )}
+                                    <h3>{project.title} <span>– {project.subtitle}</span></h3>
+                                </div>
                                 <span className="our-work-year-icon">
                                     <i className="iconoir-arrow-up-right" />
                                 </span>
@@ -67,8 +79,24 @@ const OurWorkV1 = () => {
                     <p>A selection of additional clients we&apos;ve delivered work for.</p>
 
                     <div className="our-work-more-grid">
-                        {OurWorkMoreData.map((item) =>
-                            item.href ? (
+                        {OurWorkMoreData.map((item) => {
+                            const content = (
+                                <span className="our-work-more-content">
+                                    {item.logo && (
+                                        <Image
+                                            loading="lazy"
+                                            src={`/assets/images/${item.logo}`}
+                                            alt={`${item.name} logo`}
+                                            width={100}
+                                            height={32}
+                                            className="our-work-more-logo"
+                                        />
+                                    )}
+                                    <span className="our-work-more-name">{item.name}</span>
+                                </span>
+                            );
+
+                            return item.href ? (
                                 <a
                                     className="our-work-more-item"
                                     key={item.id}
@@ -76,15 +104,15 @@ const OurWorkV1 = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    {item.name}
+                                    {content}
                                     <i className="iconoir-arrow-up-right" />
                                 </a>
                             ) : (
                                 <span className="our-work-more-item" key={item.id}>
-                                    {item.name}
+                                    {content}
                                 </span>
-                            )
-                        )}
+                            );
+                        })}
                     </div>
 
                     <div className="our-work-more-btn-wrap">

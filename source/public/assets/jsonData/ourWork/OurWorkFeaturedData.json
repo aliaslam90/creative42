@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "logo": "clients/cmc-holding.png",
         "thumb": "creative42-project-identity.jpg",
         "thumb2": "creative42-project-web.jpg",
         "title": "CMC Holding",
@@ -11,6 +12,7 @@
     },
     {
         "id": 2,
+        "logo": "clients/canadian-medical-center.png",
         "thumb": "creative42-project-web.jpg",
         "thumb2": "creative42-project-growth.jpg",
         "title": "Canadian Medical Center",
@@ -21,6 +23,7 @@
     },
     {
         "id": 3,
+        "logo": "clients/sky-dental-center.png",
         "thumb": "creative42-project-ui.jpg",
         "thumb2": "creative42-project-brand-system.jpg",
         "title": "Sky Dental Center",
@@ -31,6 +34,7 @@
     },
     {
         "id": 4,
+        "logo": "clients/al-manal-dental-center.png",
         "thumb": "creative42-project-brand-system.jpg",
         "thumb2": "creative42-project-launch.jpg",
         "title": "Al Manal Dental Center",
@@ -41,6 +45,7 @@
     },
     {
         "id": 5,
+        "logo": "clients/zircon-medical-equipment.png",
         "thumb": "creative42-project-launch.jpg",
         "thumb2": "creative42-project-identity.jpg",
         "title": "Zircon Medical Equipment",
@@ -51,6 +56,7 @@
     },
     {
         "id": 6,
+        "logo": "clients/sky-light-group.png",
         "thumb": "creative42-project-growth.jpg",
         "thumb2": "creative42-project-ui.jpg",
         "title": "Sky Light Group",

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PartnerData from "@/assets/jsonData/partner/PartnerData.json";
 
 const PartnerV1 = () => {
@@ -7,7 +8,20 @@ const PartnerV1 = () => {
                 <span className="partner-label">Clients We Worked With</span>
                 <ul>
                     {PartnerData.map((data, index) =>
-                        <li key={`${data.id}-${index}`}><span>{data.name}</span></li>
+                        <li key={`${data.id}-${index}`}>
+                            {data.logo ? (
+                                <Image
+                                    loading="lazy"
+                                    src={`/assets/images/${data.logo}`}
+                                    alt={data.name}
+                                    width={160}
+                                    height={56}
+                                    className="partner-logo"
+                                />
+                            ) : (
+                                <span>{data.name}</span>
+                            )}
+                        </li>
                     )}
                 </ul>
             </div>

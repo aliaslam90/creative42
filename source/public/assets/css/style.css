@@ -2741,6 +2741,13 @@ a {
     font-family: var(--font_urbanist);
 }
 
+.our-partner-sec ul li .partner-logo {
+    display: block;
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+}
+
 /* ===== # Pricing ===== */
 .pricing-sec {
     overflow: hidden;
@@ -4425,6 +4432,19 @@ a {
     font-weight: 500;
 }
 
+.our-work-card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.our-work-card-logo {
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+    object-position: left;
+}
+
 .our-work-year-icon {
     flex: none;
     width: 44px;
@@ -4623,6 +4643,26 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+}
+
+.our-work-more-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.our-work-more-logo {
+    width: auto;
+    height: 24px;
+    object-fit: contain;
+    flex: none;
+}
+
+.our-work-more-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .our-work-more-item {
