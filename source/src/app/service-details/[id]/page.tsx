@@ -5,6 +5,7 @@ import ServiceDetailsContent from '@/components/services/ServiceDetailsContent';
 import TestimonialV1 from '@/components/testimonial/TestimonialV1';
 import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
 import LayoutV3 from '@/components/layouts/LayoutV3';
+import HeroV2 from '@/components/hero/AboutHero';
 
 export const metadata = {
     title: "Creative42.ai - Service Details"
@@ -27,6 +28,7 @@ const ServiceDetailsPage = async ({ params }: PageProps) => {
         <>
             <div className="aixor-main service-single-page single-project">
                 <LayoutV3>
+                    <HeroV2 title="Service Details" />
                     {data && <ServiceDetailsContent serviceData={data} />}
                     <FaqV1 />
                     <TestimonialV1 />

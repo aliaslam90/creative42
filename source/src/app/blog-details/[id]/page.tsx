@@ -1,6 +1,6 @@
 import FeatureV3Data from '@/assets/jsonData/feature/FeatureV3Data.json';
 import BlogDetailsContent from '@/components/blog/BlogDetailsContent';
-import Breadcrumb from '@/components/breadcrumb/Breadcrumb';
+import HeroV2 from '@/components/hero/AboutHero';
 import LayoutV3 from '@/components/layouts/LayoutV3';
 
 export const metadata = {
@@ -23,7 +23,7 @@ const BlogDetailsPage = async ({ params }: PageProps) => {
     return (
         <div className="aixor-main contact-page">
             <LayoutV3>
-                <Breadcrumb />
+                <HeroV2 title="Blog Details" />
                 {data && <BlogDetailsContent blogData={data} />}
             </LayoutV3>
         </div>
