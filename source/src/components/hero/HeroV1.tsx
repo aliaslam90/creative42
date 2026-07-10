@@ -2,6 +2,7 @@
 import btnArrowIcon from "@/assets/images/btn-arrow.svg"
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import FactData from "@/assets/jsonData/fact/FactData.json";
 
 const heroStatIcons: Record<number, string> = {
@@ -11,6 +12,11 @@ const heroStatIcons: Record<number, string> = {
 };
 
 const HeroV1 = () => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     return (
         <>
@@ -20,6 +26,14 @@ const HeroV1 = () => {
             >
                 <div className="custom-container">
                     <div className="hero-inner home-hero-inner">
+
+                        <div className="home-hero-video">
+                            {isClient && (
+                                <video loop muted autoPlay playsInline>
+                                    <source src="/assets/video/hero-video.mp4" type="video/mp4" />
+                                </video>
+                            )}
+                        </div>
 
                         <div className="home-hero-content">
                             <div className="left hero-title-overlay">
