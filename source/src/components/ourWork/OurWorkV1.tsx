@@ -61,11 +61,13 @@ const OurWorkV1 = () => {
                                 </div>
 
                                 <div className="our-work-side">
-                                    <div className="our-work-side-image">
-                                        <Image loading="lazy" src={`/assets/images/${project.thumb2}`} alt={project.title} width={420} height={220} />
-                                    </div>
                                     <div className="our-work-side-desc">
+                                        <span className="our-work-side-label">About the project</span>
                                         <p>{project.description}</p>
+                                        <a href="/contact" className="our-work-side-link">
+                                            Start a similar project
+                                            <i className="iconoir-arrow-up-right" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>

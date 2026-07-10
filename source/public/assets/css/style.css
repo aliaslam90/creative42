@@ -4570,28 +4570,28 @@ a {
 .our-work-side {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-.our-work-side-image {
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #ececec;
-    flex: 1;
-}
-
-.our-work-side-image img {
-    display: block;
-    width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .our-work-side-desc {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: #f7f7f9;
     border: 1px solid #ececec;
     border-radius: 16px;
-    padding: 24px;
+    padding: 28px;
+}
+
+.our-work-side-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 700;
+    color: #9a9aa2;
+    margin-bottom: 14px;
+    font-family: var(--font_urbanist);
 }
 
 .our-work-side-desc p {
@@ -4600,6 +4600,23 @@ a {
     font-size: 15px;
     line-height: 1.7;
     font-family: var(--font_urbanist);
+    flex: 1;
+}
+
+.our-work-side-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: var(--font_urbanist);
+}
+
+.our-work-side-link i {
+    font-size: 16px;
 }
 
 .our-work-more {

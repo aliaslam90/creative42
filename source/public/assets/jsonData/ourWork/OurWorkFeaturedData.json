@@ -2,8 +2,7 @@
     {
         "id": 1,
         "logo": "clients/cmc-holding.png",
-        "thumb": "creative42-project-identity.jpg",
-        "thumb2": "creative42-project-web.jpg",
+        "thumb": "work/cmc-holding.png",
         "title": "CMC Holding",
         "subtitle": "Digital Transformation & Brand Experience",
         "tags": ["Digital Transformation", "Branding", "Website", "Digital Marketing"],
@@ -13,8 +12,7 @@
     {
         "id": 2,
         "logo": "clients/canadian-medical-center.png",
-        "thumb": "creative42-project-web.jpg",
-        "thumb2": "creative42-project-growth.jpg",
+        "thumb": "work/canadian-medical-center.png",
         "title": "Canadian Medical Center",
         "subtitle": "Full-Service Patient Experience",
         "tags": ["Branding", "Website", "Media Production", "CRM"],
@@ -24,8 +22,7 @@
     {
         "id": 3,
         "logo": "clients/sky-dental-center.png",
-        "thumb": "creative42-project-ui.jpg",
-        "thumb2": "creative42-project-brand-system.jpg",
+        "thumb": "work/sky-dental-center.png",
         "title": "Sky Dental Center",
         "subtitle": "Complete Digital Patient Journey",
         "tags": ["Branding", "UI/UX Design", "Website Development", "Digital Marketing"],
@@ -35,8 +32,7 @@
     {
         "id": 4,
         "logo": "clients/al-manal-dental-center.png",
-        "thumb": "creative42-project-brand-system.jpg",
-        "thumb2": "creative42-project-launch.jpg",
+        "thumb": "work/al-manal-dental-center.png",
         "title": "Al Manal Dental Center",
         "subtitle": "Full-Service Dental Brand Experience",
         "tags": ["Branding", "UI/UX Design", "Website Development", "Media Production"],
@@ -46,8 +42,7 @@
     {
         "id": 5,
         "logo": "clients/zircon-medical-equipment.png",
-        "thumb": "creative42-project-launch.jpg",
-        "thumb2": "creative42-project-identity.jpg",
+        "thumb": "work/zircon-medical-equipment.png",
         "title": "Zircon Medical Equipment",
         "subtitle": "Brand & Digital Presence",
         "tags": ["Branding", "UI/UX Design", "Website Development", "Social Media"],
@@ -57,8 +52,7 @@
     {
         "id": 6,
         "logo": "clients/sky-light-group.png",
-        "thumb": "creative42-project-growth.jpg",
-        "thumb2": "creative42-project-ui.jpg",
+        "thumb": "work/sky-light-group.png",
         "title": "Sky Light Group",
         "subtitle": "Brand & Web Experience",
         "tags": ["Branding", "Content Creation", "Website"],
