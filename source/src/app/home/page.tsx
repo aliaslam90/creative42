@@ -29,8 +29,8 @@ const Home = () => {
                     <BrandStagesV1 />
                     <TestimonialV1 />
                     <OurApproachV1 />
-                    <ContactV1 />
                     <ReachOutV1 />
+                    <ContactV1 />
                 </LayoutV1>
             </div>
         </>

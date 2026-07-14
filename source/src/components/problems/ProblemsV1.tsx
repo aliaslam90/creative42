@@ -58,7 +58,7 @@ const ProblemsV1 = () => {
                 scrollTrigger: {
                     trigger: pinRef.current,
                     start: "top top",
-                    end: "+=220%",
+                    end: "+=140%",
                     scrub: 1,
                     pin: true,
                     anticipatePin: 1,

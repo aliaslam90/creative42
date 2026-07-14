@@ -1,5 +1,5 @@
-import Image from "next/image";
 import BrandStagesData from "@/assets/jsonData/brandStages/BrandStagesData.json";
+import BrandStageIllustration from "./BrandStageIllustration";
 
 const BrandStagesV1 = () => {
     return (
@@ -29,13 +29,7 @@ const BrandStagesV1 = () => {
                             </div>
 
                             <div className="brand-stage-media">
-                                <Image
-                                    loading="lazy"
-                                    src={`/assets/images/${stage.image}`}
-                                    alt={stage.title}
-                                    width={900}
-                                    height={700}
-                                />
+                                <BrandStageIllustration id={stage.id} />
                             </div>
                         </div>
                     </div>

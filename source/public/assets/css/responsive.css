@@ -779,11 +779,11 @@
     }
 
     .scroll-to-show-menu {
-        display: block;
+        display: none;
     }
 
     .hamburg-menu {
-        transform: scale(1);
+        transform: scale(0);
     }
 }
 

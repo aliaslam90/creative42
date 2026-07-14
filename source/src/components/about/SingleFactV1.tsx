@@ -16,14 +16,14 @@ const SingleFactV1 = ({ fact }: { fact: DataType }) => {
 
     return (
         <>
-            <Image loading="lazy" src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
+            <Image src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
             <div className="funfact-header">
                 <span className="title">{title}</span>
             </div>
             <div className="funfact-footer">
                 <span className="number">{end}<span>+</span></span>
                 <Link href={`/service-details/${id}`}>
-                    <Image loading="lazy" src={angleIcon} alt="icon" />
+                    <Image src={angleIcon} alt="icon" />
                 </Link>
             </div>
         </>

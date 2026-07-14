@@ -1,5 +1,6 @@
 "use client";
 import ServicesStackData from "@/assets/jsonData/servicesStack/ServicesStackData.json";
+import ServiceIllustration from "./ServiceIllustration";
 
 const ServicesStackV1 = () => {
     return (
@@ -46,7 +47,7 @@ const ServicesStackV1 = () => {
                                         <span />
                                     </div>
                                     <div className="services-stack-visual-icon">
-                                        <i className={service.icon} />
+                                        <ServiceIllustration id={service.id} />
                                     </div>
                                 </div>
                             </div>

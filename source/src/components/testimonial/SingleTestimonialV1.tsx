@@ -15,12 +15,12 @@ const SingleTestimonialV1 = ({ testimonial }: { testimonial: DataType }) => {
     return (
         <>
             <div className="testimonial-box">
-                <Image loading="lazy" src={rating} alt="icon" />
+                <Image src={rating} alt="icon" />
                 <div className="testimonial-content">
                     <p>“{text}”</p>
                 </div>
                 <div className="testimonial-author">
-                    <Image loading="lazy" src={`/assets/images/${thumb}`} alt="testimonial" width={80} height={80} />
+                    <Image src={`/assets/images/${thumb}`} alt="testimonial" width={80} height={80} />
                     <div className="content">
                         <span className="name">{name}</span>
                         <span className="designation">{designation}</span>

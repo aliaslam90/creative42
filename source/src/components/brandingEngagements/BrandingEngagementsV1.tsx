@@ -10,7 +10,8 @@ const BrandingEngagementsV1 = () => {
             <div className="custom-container">
                 <div className="branding-eng-top">
                     <h2 className="branding-eng-heading">
-                        Our<br />Branding<br />Engage-<br />ments
+                        <span className="brand-stage-title">Our Branding</span>
+                        <span className="brand-stage-subtitle">Engagements</span>
                     </h2>
 
                     <div className="branding-eng-desc">
@@ -37,7 +38,6 @@ const BrandingEngagementsV1 = () => {
                         </div>
                     ))}
                 </div>
-                <div className="branding-eng-divider" />
             </div>
         </div>
     );

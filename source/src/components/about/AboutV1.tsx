@@ -30,7 +30,7 @@ const AboutV1 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image loading="lazy" src={unionIcon} alt="About Us" /> About Us
+                            <Image src={unionIcon} alt="About Us" /> About Us
                         </span>
                         <div className="about-story">
                             <h2>Why Creative42.ai?</h2>

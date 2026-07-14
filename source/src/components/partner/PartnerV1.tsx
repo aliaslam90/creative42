@@ -11,7 +11,7 @@ const PartnerV1 = () => {
                         <li key={`${data.id}-${index}`}>
                             {data.logo ? (
                                 <Image
-                                    loading="lazy"
+                                   
                                     src={`/assets/images/${data.logo}`}
                                     alt={data.name}
                                     width={160}

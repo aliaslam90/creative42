@@ -18,16 +18,6 @@ const OurWorkV1 = () => {
                         <div className="our-work-card" key={project.id}>
                             <div className="our-work-card-top">
                                 <div className="our-work-card-title">
-                                    {project.logo && (
-                                        <Image
-                                            loading="lazy"
-                                            src={`/assets/images/${project.logo}`}
-                                            alt={`${project.title} logo`}
-                                            width={140}
-                                            height={48}
-                                            className="our-work-card-logo"
-                                        />
-                                    )}
                                     <h3>{project.title} <span>– {project.subtitle}</span></h3>
                                 </div>
                                 <span className="our-work-year-icon">
@@ -52,7 +42,7 @@ const OurWorkV1 = () => {
                                             <span />
                                         </div>
                                         <div className="our-work-browser-image">
-                                            <Image loading="lazy" src={`/assets/images/${project.thumb}`} alt={project.title} width={800} height={520} />
+                                            <Image src={`/assets/images/${project.thumb}`} alt={project.title} width={800} height={520} />
                                         </div>
                                     </div>
                                     <div className="our-work-laptop-base">
@@ -84,16 +74,6 @@ const OurWorkV1 = () => {
                         {OurWorkMoreData.map((item) => {
                             const content = (
                                 <span className="our-work-more-content">
-                                    {item.logo && (
-                                        <Image
-                                            loading="lazy"
-                                            src={`/assets/images/${item.logo}`}
-                                            alt={`${item.name} logo`}
-                                            width={100}
-                                            height={32}
-                                            className="our-work-more-logo"
-                                        />
-                                    )}
                                     <span className="our-work-more-name">{item.name}</span>
                                 </span>
                             );

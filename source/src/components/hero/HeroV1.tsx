@@ -3,6 +3,7 @@ import btnArrowIcon from "@/assets/images/btn-arrow.svg"
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 import FactData from "@/assets/jsonData/fact/FactData.json";
 
 const heroStatIcons: Record<number, string> = {
@@ -48,18 +49,18 @@ const HeroV1 = () => {
                             <div className="home-hero-stats">
                                 <span className="home-hero-stat">
                                     <i className="iconoir-calendar" />
-                                    <strong>20+</strong> Years in the Industry
+                                    <strong>{isClient ? <CountUp end={20} duration={2} /> : 20}+</strong> Years in the Industry
                                 </span>
                                 {FactData.slice(0, 3).map(fact => (
                                     <span className="home-hero-stat" key={fact.id}>
                                         <i className={heroStatIcons[fact.id]} />
-                                        <strong>{fact.end}+</strong> {fact.title}
+                                        <strong>{isClient ? <CountUp end={Number(fact.end)} duration={2} /> : fact.end}+</strong> {fact.title}
                                     </span>
                                 ))}
 
-                                <Link href="/contact" className="theme-btn">
+                                <Link href="/contact" className="theme-btn hero-cta-btn">
                                     {`Let's Creative`}
-                                    <Image loading="lazy" src={btnArrowIcon} alt="icon" />
+                                    <Image src={btnArrowIcon} alt="icon" />
                                 </Link>
                             </div>
                         </div>

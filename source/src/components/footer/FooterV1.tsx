@@ -20,17 +20,17 @@ const FooterV1 = () => {
                                     <ul>
                                         <li>
                                             <Link className="with-border" href="/about">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> About Us
+                                                <Image src={btnArrow} alt="icon" /> About Us
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="with-border" href="/projects">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Projects
+                                                <Image src={btnArrow} alt="icon" /> Projects
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="with-border" href="/contact">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Contact Us
+                                                <Image src={btnArrow} alt="icon" /> Contact Us
                                             </Link>
                                         </li>
                                     </ul>
@@ -58,7 +58,7 @@ const FooterV1 = () => {
                                     </div>
                                     <Link href="/contact" className="theme-btn">
                                         {`Let's Creative`}
-                                        <Image loading="lazy" src={btnArrow} alt="icon" />
+                                        <Image src={btnArrow} alt="icon" />
                                     </Link>
                                 </div>
                             </div>
@@ -72,22 +72,22 @@ const FooterV1 = () => {
                                     <ul>
                                         <li>
                                             <a className="with-border" href="https://instagram.com/" target="_blank">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Instagram
+                                                <Image src={btnArrow} alt="icon" /> Instagram
                                             </a>
                                         </li>
                                         <li>
                                             <a className="with-border" href="https://twitter.com/" target="_blank">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Twitter
+                                                <Image src={btnArrow} alt="icon" /> Twitter
                                             </a>
                                         </li>
                                         <li>
                                             <a className="with-border" href="https://behance.com/" target="_blank">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Behance
+                                                <Image src={btnArrow} alt="icon" /> Behance
                                             </a>
                                         </li>
                                         <li>
                                             <a className="with-border" href="https://dribbble.com/" target="_blank">
-                                                <Image loading="lazy" src={btnArrow} alt="icon" /> Dribbble
+                                                <Image src={btnArrow} alt="icon" /> Dribbble
                                             </a>
                                         </li>
                                     </ul>
@@ -101,7 +101,7 @@ const FooterV1 = () => {
                 </div>
                 <div className="footer-bottom">
                     <div className="split-text-anim">
-                        <Image loading="lazy" data-aos="slide-up" data-aos-duration={700} src={footerBigLogo} alt="logo" />
+                        <Image data-aos="slide-up" data-aos-duration={700} src={footerBigLogo} alt="logo" />
                     </div>
                 </div>
             </footer>
