@@ -11,12 +11,12 @@ const PartnerV1 = () => {
                         <li key={`${data.id}-${index}`}>
                             {data.logo ? (
                                 <Image
-                                   
                                     src={`/assets/images/${data.logo}`}
                                     alt={data.name}
                                     width={160}
                                     height={56}
                                     className="partner-logo"
+                                    style={{ height: `${40 * (data.scale ?? 1)}px` }}
                                 />
                             ) : (
                                 <span>{data.name}</span>
