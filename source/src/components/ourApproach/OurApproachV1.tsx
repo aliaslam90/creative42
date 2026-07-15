@@ -42,7 +42,6 @@ const OurApproachV1 = () => {
                             <span className="approach-pillar-subtitle">{pillar.subtitle}</span>
                         </div>
                     ))}
-                    <span className="approach-pillars-line" />
                     <span className="approach-sweetspot">
                         <span className="approach-sweetspot-dot" />
                         The Sweet Spot

@@ -41,14 +41,7 @@ const ServicesStackV1 = () => {
                                 </div>
 
                                 <div className="services-stack-visual">
-                                    <div className="services-stack-visual-bar">
-                                        <span />
-                                        <span />
-                                        <span />
-                                    </div>
-                                    <div className="services-stack-visual-icon">
-                                        <ServiceIllustration id={service.id} />
-                                    </div>
+                                    <ServiceIllustration id={service.id} />
                                 </div>
                             </div>
                         </div>
