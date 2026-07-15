@@ -1177,6 +1177,32 @@ a {
     justify-content: center;
 }
 
+/* # Internal page hero (About, Contact, FAQ, Projects, Blog, ...) */
+.hero-sec.inner-page-hero-sec .hero-inner.home-hero-inner {
+    height: auto;
+    min-height: 0;
+    max-height: 450px;
+    padding: 120px 72px 40px;
+    justify-content: center;
+}
+
+.hero-sec.inner-page-hero-sec .hero-title-line {
+    font-size: clamp(40px, 5vw, 64px);
+}
+
+.hero-sec.inner-page-hero-sec .left.hero-title-overlay {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 1.5vw, 20px);
+}
+
+@media (max-width: 767px) {
+    .hero-sec.inner-page-hero-sec .hero-inner.home-hero-inner {
+        padding: 100px 20px 40px;
+    }
+}
+
 .home-hero-video {
     position: absolute;
     top: 50%;
@@ -5914,14 +5940,14 @@ a.our-work-more-item i {
 
 .approach-pillar:hover .approach-mockup-frame {
     transform: scale(1.03);
-    border-color: rgba(200, 162, 68, 0.55);
+    border-color: rgba(255, 255, 255, 0.28);
 }
 
 .approach-mockup-frame {
     width: 100%;
     border-radius: 16px;
     background: #000000;
-    border: 1px solid rgba(200, 162, 68, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
     padding: 22px;
     display: flex;
@@ -5932,12 +5958,13 @@ a.our-work-more-item i {
     font-family: var(--font_urbanist);
 }
 
+/* ---- Strategy: analytics chart ---- */
 .approach-mockup-trend {
     position: relative;
     flex: 1;
     border-radius: 12px;
-    background: rgba(200, 162, 68, 0.06);
-    border: 1px solid rgba(200, 162, 68, 0.18);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -5958,9 +5985,9 @@ a.our-work-more-item i {
     gap: 5px;
     padding: 5px 10px;
     border-radius: 999px;
-    background: rgba(200, 162, 68, 0.14);
-    border: 1px solid rgba(200, 162, 68, 0.4);
-    color: #c8a244;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     font-size: 10px;
     font-weight: 800;
 }
@@ -5974,12 +6001,12 @@ a.our-work-more-item i {
     font-size: 13px;
 }
 
-.mockup-stat-pill.gold {
-    border-color: rgba(200, 162, 68, 0.35);
-    color: #c8a244;
+.mockup-stat-pill.mono {
+    border-color: rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.mockup-stat-pill.gold strong {
+.mockup-stat-pill.mono strong {
     color: #ffffff;
 }
 
@@ -5988,114 +6015,149 @@ a.our-work-more-item i {
     height: 20px;
 }
 
+/* ---- Design & Craft: design tool panel ---- */
+.approach-mockup-tool {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 10px;
+    min-height: 0;
+}
+
+.approach-mockup-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.approach-mockup-layer-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 7px;
+    border-radius: 6px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.approach-mockup-layer-row i {
+    font-size: 12px;
+}
+
+.approach-mockup-layer-row.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
 .approach-mockup-canvas {
     position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 14px 14px;
 }
 
-.approach-mockup-shape {
+.approach-mockup-canvas-shape {
     position: absolute;
-    width: 68%;
+}
+
+.approach-mockup-canvas-shape.circle {
+    width: 34%;
     aspect-ratio: 1 / 1;
-    border-radius: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    top: 14%;
+    left: 12%;
 }
 
-.shape-back {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translate(14%, -22%) rotate(9deg);
+.approach-mockup-canvas-shape.square {
+    width: 46%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    background: #ffffff;
+    bottom: 12%;
+    right: 10%;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
-.shape-mid {
-    background: rgba(200, 162, 68, 0.14);
-    border: 1px solid rgba(200, 162, 68, 0.35);
-    transform: translate(-16%, -4%) rotate(-7deg);
+.approach-mockup-canvas-shape .handle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #000000;
+    border: 1.5px solid #ffffff;
 }
 
-.shape-front {
-    background: #c8a244;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: #000000;
-    transform: translate(2%, 16%);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+.handle-tl { top: -3px; left: -3px; }
+.handle-tr { top: -3px; right: -3px; }
+.handle-bl { bottom: -3px; left: -3px; }
+.handle-br { bottom: -3px; right: -3px; }
+
+.approach-mockup-cursor {
+    position: absolute;
+    bottom: 8%;
+    left: 8%;
+    color: #ffffff;
+    font-size: 16px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-.shape-front i {
-    font-size: 22px;
-}
-
-.shape-front span {
-    font-size: 10px;
-    font-weight: 800;
-    text-align: center;
-    padding: 0 10%;
-}
-
-.approach-mockup-huddle {
+/* ---- Immersion: shared document + collaborator cursors ---- */
+.approach-mockup-doc {
+    position: relative;
     flex: 1;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+    gap: 10px;
 }
 
-.approach-mockup-avatar-stack {
-    display: flex;
-    align-items: center;
+.approach-mockup-doc-line {
+    display: block;
+    height: 8px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.14);
 }
 
-.approach-mockup-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
+.approach-mockup-cursor-tag {
+    position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 5px;
+    padding: 4px 9px 4px 6px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
     color: #000000;
-    background: rgba(255, 255, 255, 0.85);
-    font-size: 18px;
-    border: 2px solid #000000;
-    margin-left: -12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
-.approach-mockup-avatar:first-child {
-    margin-left: 0;
+.approach-mockup-cursor-tag i {
+    font-size: 11px;
 }
 
-.approach-mockup-avatar.gold {
-    background: #c8a244;
-    z-index: 1;
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
+.approach-mockup-cursor-dot {
+    display: none;
 }
 
-.approach-mockup-avatar-count {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(200, 162, 68, 0.14);
-    border: 2px solid #000000;
-    color: #c8a244;
-    font-size: 12px;
-    font-weight: 800;
-    margin-left: -12px;
+.tag-a {
+    top: 34%;
+    left: 42%;
+    background: #ffffff;
 }
 
-.approach-mockup-huddle-label {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
+.tag-b {
+    top: 66%;
+    left: 18%;
+    background: #b3b3b3;
 }
 
 .approach-mockup-live-badge {
@@ -6105,9 +6167,9 @@ a.our-work-more-item i {
     align-self: flex-start;
     padding: 6px 12px;
     border-radius: 999px;
-    background: rgba(200, 162, 68, 0.1);
-    border: 1px solid rgba(200, 162, 68, 0.35);
-    color: #c8a244;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
     font-size: 11px;
     font-weight: 700;
 }
@@ -6116,7 +6178,7 @@ a.our-work-more-item i {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #c8a244;
+    background: #ffffff;
     animation: illuBlink 1.4s ease-in-out infinite;
 }
 
