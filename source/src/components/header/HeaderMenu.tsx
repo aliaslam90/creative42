@@ -7,18 +7,13 @@ import { useEffect, useRef, useState } from 'react';
 const DARK_SECTION_SELECTOR =
     ".problems-sec, .about-sec, .services-stack-sec, .awards-sec, .testimonial-sec, .our-approach-sec, .contact-sec, .footer-area";
 
-const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/#services", label: "Services" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact Us" },
-];
+interface HeaderMenuProps {
+    onOpenSidebar: () => void;
+}
 
-const HeaderMenu = () => {
+const HeaderMenu = ({ onOpenSidebar }: HeaderMenuProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isDark, setIsDark] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const headerRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
@@ -51,25 +46,16 @@ const HeaderMenu = () => {
         };
     }, []);
 
-    useEffect(() => {
-        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [isMobileMenuOpen]);
-
-    const closeMobileMenu = () => setIsMobileMenuOpen(false);
-
     return (
         <>
             <header
                 ref={headerRef}
-                className={`header-menu-wrap ${isScrolled ? "is-scrolled" : ""} ${isDark ? "is-dark" : ""} ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}
+                className={`header-menu-wrap ${isScrolled ? "is-scrolled" : ""} ${isDark ? "is-dark" : ""}`}
             >
                 <div className="custom-container">
                     <div className="custom-row">
 
-                        <Link href="/" className="logo" onClick={closeMobileMenu}>
+                        <Link href="/" className="logo">
                             <Image src={logoCreative} alt="Creative42 logo" priority />
                         </Link>
 
@@ -96,41 +82,22 @@ const HeaderMenu = () => {
                             <Link href="/contact" className="header-cta">Inquiry Now</Link>
                         </div>
 
-                        {/* Mobile menu toggle */}
-                        <button
-                            type="button"
-                            className="header-mobile-toggle"
-                            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                            aria-expanded={isMobileMenuOpen}
-                            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                        {/* Mobile menu toggle (opens the full sidebar) */}
+                        <span
+                            className="header-hamburger"
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Open menu"
+                            onClick={onOpenSidebar}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") onOpenSidebar();
+                            }}
                         >
-                            {isMobileMenuOpen ? (
-                                <i className="las la-times" />
-                            ) : (
-                                <span className="header-mobile-toggle-lines">
-                                    <span />
-                                    <span />
-                                    <span />
-                                </span>
-                            )}
-                        </button>
+                            <span />
+                            <span />
+                            <span />
+                        </span>
                     </div>
-                </div>
-
-                {/* Mobile dropdown panel */}
-                <div className={`header-mobile-panel ${isMobileMenuOpen ? "active" : ""}`}>
-                    <nav>
-                        <ul>
-                            {navLinks.map((link) => (
-                                <li key={link.href}>
-                                    <Link href={link.href} onClick={closeMobileMenu}>{link.label}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                    <Link href="/contact" className="header-mobile-cta" onClick={closeMobileMenu}>
-                        Book A Free Call
-                    </Link>
                 </div>
             </header>
         </>

@@ -1,51 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 "use client";
 import sidebarbg from "@/assets/images/sidebarbg.png";
 import Image from "next/image";
 import SocialShareV1 from "../social/SocialShareV1";
-import { useEffect, useState } from "react";
 
-const HeaderSidebar = () => {
-    const [isSidebarActive, setIsSidebarActive] = useState(false);
-    const [isHamburgActive, setIsHamburgActive] = useState(false);
+interface HeaderSidebarProps {
+    isSidebarActive: boolean;
+    onClose: () => void;
+}
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsHamburgActive(window.scrollY >= 100);
-        };
-
-        // Attach event listener
-        window.addEventListener("scroll", handleScroll);
-
-        // Cleanup function
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    const handleHamburgClick = () => {
-        setIsSidebarActive(true);
-        document.body.style.overflow = "hidden";
-    };
-
+const HeaderSidebar = ({ isSidebarActive, onClose }: HeaderSidebarProps) => {
     const handleCloseClick = () => {
-        setIsSidebarActive(false);
-        document.body.style.overflow = "auto";
+        onClose();
     };
 
     return (
         <>
-
-            {/* hamburg-menu */}
-            <div className="scroll-to-show-menu">
-                <span className={`hamburg-menu ${isHamburgActive ? "active" : ""}`} onClick={handleHamburgClick}>
-                    <span />
-                    <span />
-                    <span />
-                </span>
-            </div>
-
             {/* Sidebar */}
             <div className={`header-sidebar-wrap ${isSidebarActive ? "active" : ""}`}>
                 <div className="header-sidebar-content">
