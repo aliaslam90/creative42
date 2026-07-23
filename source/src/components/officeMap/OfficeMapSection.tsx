@@ -20,6 +20,7 @@ const OfficeMapSection = () => {
     const mapElRef = useRef<HTMLDivElement | null>(null);
     const mapRef = useRef<LeafletMap | null>(null);
     const markersRef = useRef<Record<string, Marker>>({});
+    const initStartedRef = useRef(false);
 
     const [shouldLoadMap, setShouldLoadMap] = useState(false);
     const [loadState, setLoadState] = useState<LoadState>("idle");
@@ -30,7 +31,9 @@ const OfficeMapSection = () => {
         [selectedId]
     );
 
-    // Lazy-load the map once the section nears the viewport.
+    // Lazy-load the map once the section nears the viewport, with a safety-net
+    // timer so the map still loads even on pages using transform-based/virtual
+    // scrolling, where IntersectionObserver's default viewport root never fires.
     useEffect(() => {
         const node = sectionRef.current;
 
@@ -39,19 +42,17 @@ const OfficeMapSection = () => {
             return;
         }
 
-        // Fast path: the section may already be at or near the viewport on mount
-        // (e.g. a short page, or a deep link that scrolls straight to it).
-        const rect = node.getBoundingClientRect();
-        const nearViewport = rect.top < window.innerHeight + 300 && rect.bottom > -300;
-        if (nearViewport) {
+        let settled = false;
+        const load = () => {
+            if (settled) return;
+            settled = true;
             setShouldLoadMap(true);
-            return;
-        }
+        };
 
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries.some((entry) => entry.isIntersecting)) {
-                    setShouldLoadMap(true);
+                    load();
                     observer.disconnect();
                 }
             },
@@ -59,7 +60,12 @@ const OfficeMapSection = () => {
         );
 
         observer.observe(node);
-        return () => observer.disconnect();
+        const fallbackTimer = window.setTimeout(load, 1500);
+
+        return () => {
+            observer.disconnect();
+            window.clearTimeout(fallbackTimer);
+        };
     }, []);
 
     const focusOffice = useCallback((officeId: string) => {
@@ -74,17 +80,19 @@ const OfficeMapSection = () => {
     }, []);
 
     useEffect(() => {
-        if (!shouldLoadMap || offices.length === 0) return;
-        if (loadState !== "idle") return;
+        // Guard with a ref (not state) so a dev-mode Strict Mode double-invoke
+        // of this effect can never leave the map stuck mid-load: state-based
+        // guards can race across the two invocations and never resolve.
+        if (!shouldLoadMap || offices.length === 0 || initStartedRef.current) return;
+        initStartedRef.current = true;
 
-        let cancelled = false;
         setLoadState("loading");
 
         (async () => {
             try {
                 const L = (await import("leaflet")).default;
 
-                if (cancelled || !mapElRef.current) return;
+                if (!mapElRef.current) return;
 
                 const bounds = L.latLngBounds(offices.map((o) => [o.lat, o.lng] as [number, number]));
 
@@ -160,18 +168,14 @@ const OfficeMapSection = () => {
                 });
 
                 mapRef.current = map;
-                if (!cancelled) setLoadState("ready");
+                setLoadState("ready");
             } catch (err) {
                 // eslint-disable-next-line no-console
                 console.error("Office map failed to load", err);
-                if (!cancelled) setLoadState("error");
+                setLoadState("error");
             }
         })();
-
-        return () => {
-            cancelled = true;
-        };
-    }, [shouldLoadMap, loadState, focusOffice]);
+    }, [shouldLoadMap, focusOffice]);
 
     useEffect(() => {
         return () => {
