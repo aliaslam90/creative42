@@ -1,0 +1,16 @@
+[
+  {
+    "id": "hq-dubai",
+    "name": "Creative42 Headquarters",
+    "city": "Dubai",
+    "emirate": "Dubai",
+    "lat": 25.2048,
+    "lng": 55.2708,
+    "address": "Address to be confirmed, Dubai, United Arab Emirates",
+    "phone": "+971 4 000 0000",
+    "email": "hello@creative42.ai",
+    "hours": "Sun – Thu, 9:00 AM – 6:00 PM",
+    "directionsUrl": "https://www.google.com/maps/search/?api=1&query=25.2048,55.2708",
+    "image": null
+  }
+]

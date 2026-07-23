@@ -6,6 +6,7 @@ import ContactV1 from "@/components/contact/ContactV1";
 import HeroV1 from "@/components/hero/HeroV1";
 import LayoutV1 from "@/components/layouts/LayoutV1";
 import OurApproachV1 from "@/components/ourApproach/OurApproachV1";
+import OfficeMapSection from "@/components/officeMap/OfficeMapSection";
 import OurWorkV1 from "@/components/ourWork/OurWorkV1";
 import PartnerV1 from "@/components/partner/PartnerV1";
 import ProblemsV1 from "@/components/problems/ProblemsV1";
@@ -31,6 +32,7 @@ const Home = () => {
                     <OurApproachV1 />
                     <ReachOutV1 />
                     <ContactV1 />
+                    <OfficeMapSection />
                 </LayoutV1>
             </div>
         </>
