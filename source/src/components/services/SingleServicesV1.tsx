@@ -16,7 +16,7 @@ const SingleServicesV1 = ({ services }: { services: DataType }) => {
         <>
             <div className="service-inner">
                 <h4 className="title">
-                    <Image src={`/assets/images/${icon}`} alt="icon" width={100} height={100} />
+                    <Image loading="lazy" src={`/assets/images/${icon}`} alt="icon" width={100} height={100} />
                     <Link href={`/service-details/${id}`}>{name}</Link>
                 </h4>
                 <p className="service-feature-lists">
@@ -25,7 +25,7 @@ const SingleServicesV1 = ({ services }: { services: DataType }) => {
                     ))}
                 </p>
                 <div className="service-img-box">
-                    <Image src={`/assets/images/${thumb}`} alt="Icon" width={512} height={468} />
+                    <Image loading="lazy" src={`/assets/images/${thumb}`} alt="Icon" width={512} height={468} />
                 </div>
             </div>
         </>

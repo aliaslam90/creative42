@@ -21,7 +21,7 @@ const SingleTeamV1 = ({ member }: { member: DataType }) => {
             <div className="team-member-box" data-aos="fade-up" data-aos-delay={delay}>
                 <div className="img-box">
                     <Link href={`/team-details/${id}`}>
-                        <Image src={`/assets/images/${thumb}`} alt="team-img" width={790} height={780} />
+                        <Image loading="lazy" src={`/assets/images/${thumb}`} alt="team-img" width={790} height={780} />
                     </Link>
                 </div>
                 <div className="content">

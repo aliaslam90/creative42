@@ -11,7 +11,7 @@ const FeatureV1 = () => {
                 <div className="custom-container">
                     <div className="section-header section-header2">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             Our projects
                         </span>
                         <h2 className="section-title section-title2">

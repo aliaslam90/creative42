@@ -18,7 +18,7 @@ const SingleProcessV1 = ({ process }: { process: DataType }) => {
             <div className="team-member-box process-box" data-aos="fade-up" data-aos-delay={delay}>
                 <div className="img-box">
                     <span className="number">{number}</span>
-                    <Image src={`/assets/images/${thumb}`} alt="Process" width={745} height={760} />
+                    <Image loading="lazy" src={`/assets/images/${thumb}`} alt="Process" width={745} height={760} />
                 </div>
                 <div className="content">
                     <span className="name">{name}</span>

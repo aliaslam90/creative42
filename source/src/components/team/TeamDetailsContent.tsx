@@ -17,7 +17,7 @@ const TeamDetailsContent = ({ memberData }: { memberData: DataType }) => {
                 <div className="team-details">
                     <div className="team-content-top">
                         <div className="thumb">
-                            <Image src={`/assets/images/${thumb}`} alt="Thumb" width={840} height={830} />
+                            <Image loading="lazy" src={`/assets/images/${thumb}`} alt="Thumb" width={840} height={830} />
                         </div>
                         <div className="right-info">
                             <h2 className="title">{name}</h2>
@@ -38,7 +38,7 @@ const TeamDetailsContent = ({ memberData }: { memberData: DataType }) => {
                             <div className="button">
                                 <Link href="/contact" className="theme-btn">
                                     {`Let's Creative`}
-                                    <Image src={btnArrow} alt="icon" />
+                                    <Image loading="lazy" src={btnArrow} alt="icon" />
                                 </Link>
                             </div>
                         </div>

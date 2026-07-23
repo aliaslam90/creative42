@@ -23,7 +23,7 @@ const HeaderSidebar = ({ isSidebarActive, onClose }: HeaderSidebarProps) => {
                     </span>
 
                     {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" suppressHydrationWarning />
+                    <Image loading="lazy" src={sidebarbg} alt="sidebar" className="sidebar-shape" suppressHydrationWarning />
                     <div className="header-sidebar-top">
                         <ul>
                             <li>

@@ -13,7 +13,7 @@ const SingleServicesV2 = ({ service }: { service: DataType }) => {
         <>
             <div className="service-inner">
                 <div className="service-img-box">
-                    <Image src={`/assets/images/${thumb}`} alt="image" width={512} height={468} />
+                    <Image loading="lazy" src={`/assets/images/${thumb}`} alt="image" width={512} height={468} />
                 </div>
                 <div className="service-feature-description">
                     <h4 className="title">{title}</h4>

@@ -15,6 +15,7 @@ const PartnerV1 = () => {
                                     alt={data.name}
                                     width={160}
                                     height={56}
+                                    loading="lazy"
                                     className="partner-logo"
                                     style={{ height: `${40 * (data.scale ?? 1)}px` }}
                                 />

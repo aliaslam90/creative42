@@ -125,7 +125,7 @@ const ContactV2 = () => {
                         <div className="input-group">
                             <button type="submit" className="theme-btn">
                                 Get Started
-                                <Image src={btnArrow} alt="icon" />
+                                <Image loading="lazy" src={btnArrow} alt="icon" />
                             </button>
                         </div>
                         <div id="result" />

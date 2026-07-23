@@ -17,7 +17,7 @@ const AboutV2 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={unionIcon} alt="About Us" /> About Us
+                            <Image loading="lazy" src={unionIcon} alt="About Us" /> About Us
                         </span>
                         <div className="right">
                             <div className="about-story">

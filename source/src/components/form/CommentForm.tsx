@@ -16,7 +16,7 @@ const CommentForm = () => {
         <>
             <div className="comment-form-wrap">
                 <h3 className="title-with-circle section-subtitle">
-                    <Image src={Union} alt="icon" />
+                    <Image loading="lazy" src={Union} alt="icon" />
                     LEAVE A COMMENT
                 </h3>
                 <form className="comment-form" onSubmit={handleForm}>
@@ -34,7 +34,7 @@ const CommentForm = () => {
                     <div className="input-group">
                         <button className="theme-btn">
                             Post a comment
-                            <Image src={btnArrow} alt="icon" />
+                            <Image loading="lazy" src={btnArrow} alt="icon" />
                         </button>
                     </div>
                 </form>

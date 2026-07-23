@@ -15,13 +15,13 @@ const SingleFactV2 = ({ fact }: { fact: DataType }) => {
     return (
         <>
             <div data-aos="fade-up" className={`funfact-box ${activeClass}`} data-aos-delay={delay}>
-                <Image src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
+                <Image loading="lazy" src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
                 <div className="funfact-header">
                     <span className="title">{title}</span>
                 </div>
                 <div className="funfact-footer">
                     <span className="number">{end}<span>+</span></span>
-                    <Image src={angleIcon} alt="icon" />
+                    <Image loading="lazy" src={angleIcon} alt="icon" />
                 </div>
             </div>
         </>

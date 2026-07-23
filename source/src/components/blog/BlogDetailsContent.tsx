@@ -43,7 +43,7 @@ const BlogDetailsContent = ({ blogData }: { blogData: DataType }) => {
                                     <p>Visual campaigns are key to capturing attention and delivering impactful messages. By blending eye-catching imagery with thoughtful messaging, these campaigns engage audiences and leave a lasting impression. Whether for online platforms or print, the aim is to drive action and deepen brand connections. Done right, visual campaigns can elevate your brand and enhance its visibility.</p>
                                     <p>Whether in digital or print formats, the objective is to inspire action and strengthen brand loyalty. When executed effectively, visual campaigns can significantly boost your brand’s recognition and impact.</p>
                                 </div>
-                                <Image src={`/assets/images/${thumbFull}`} alt="image" width={1220} height={1280} />
+                                <Image loading="lazy" src={`/assets/images/${thumbFull}`} alt="image" width={1220} height={1280} />
                                 <div className="blog-content-box">
                                     <h3>Importance of Visual Campaigns</h3>
                                     <p>Visual campaigns are vital for effective communication. They quickly capture attention and enhance engagement through compelling imagery. By conveying messages efficiently visuals create memorable impressions that strengthen brand identity. Consistent visual themes foster recognition, while effective designs drive action and encourage audience engagement.</p>
@@ -58,26 +58,26 @@ const BlogDetailsContent = ({ blogData }: { blogData: DataType }) => {
                             </div>
                             <div className="comment-lists-wrap">
                                 <h3 className="title-with-circle section-subtitle">
-                                    <Image src={Union} alt="icon" />
+                                    <Image loading="lazy" src={Union} alt="icon" />
                                     COMMENTS
                                 </h3>
                                 <div className="comment-lists">
                                     <div className="comment-box">
-                                        <Image src={comment1} alt="Comment" />
+                                        <Image loading="lazy" src={comment1} alt="Comment" />
                                         <div className="comment-body">
                                             <span className="name">AIDEN</span>
                                             <span className="date">2 January 2023</span>
                                             <p>As the internet continues to develop and grow exponentially, jobs related to industry do too, particularly those that relate to web design and development. </p>
-                                            <Link href="#" className="reply-btn theme-btn">REPLY <Image src={replayIcon} alt="Icon" /></Link>
+                                            <Link href="#" className="reply-btn theme-btn">REPLY <Image loading="lazy" src={replayIcon} alt="Icon" /></Link>
                                         </div>
                                     </div>
                                     <div className="comment-box">
-                                        <Image src={comment2} alt="Comment" />
+                                        <Image loading="lazy" src={comment2} alt="Comment" />
                                         <div className="comment-body">
                                             <span className="name">RANDREN</span>
                                             <span className="date">8 September 2024</span>
                                             <p>Given the rapid expansion and evolution of the internet, job opportunities in the industry are also increasing, especially in areas like web design and development.</p>
-                                            <Link href="#" className="reply-btn theme-btn">REPLY <Image src={replayIcon} alt="Icon" /></Link>
+                                            <Link href="#" className="reply-btn theme-btn">REPLY <Image loading="lazy" src={replayIcon} alt="Icon" /></Link>
                                         </div>
                                     </div>
                                 </div>

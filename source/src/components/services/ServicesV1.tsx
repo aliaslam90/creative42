@@ -25,7 +25,7 @@ const ServicesV1 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             Our Service
                         </span>
                         <AnimatedText>
@@ -37,15 +37,15 @@ const ServicesV1 = () => {
                     <div className="service-lists-header">
                         <div className="custom-container">
                             <div className="service-header-th">
-                                <Image src={arrowDown} alt="icon" />
+                                <Image loading="lazy" src={arrowDown} alt="icon" />
                                 Service
                             </div>
                             <div className="service-header-th">
-                                <Image src={arrowDown} alt="icon" />
+                                <Image loading="lazy" src={arrowDown} alt="icon" />
                                 Features
                             </div>
                             <div className="service-header-th">
-                                <Image src={arrowDown} alt="icon" />
+                                <Image loading="lazy" src={arrowDown} alt="icon" />
                                 3D Illustration
                             </div>
                         </div>

@@ -24,7 +24,7 @@ const PriceV1 = () => {
                 <div className="custom-container">
                     <div className="section-header section-header2">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             PRICING PLANS
                         </span>
                         <h2 className="section-title section-title2">
@@ -45,17 +45,17 @@ const PriceV1 = () => {
                             </li>
                         </ul>
                         <span className="nav-hover-shape" ref={indicatorRef} style={{ left: 439, opacity: 1 }}>
-                            <Image src={pricingNavbar} alt="shape" />
+                            <Image loading="lazy" src={pricingNavbar} alt="shape" />
                         </span>
                     </div>
                     <div className="tab-content" id="myTabContent">
                         <div className="tab-pane fade show active" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
                             <div className="pricing-lists">
                                 <div className="shape_img shape_img1">
-                                    <Image src={pricingShape1} alt="shape" />
+                                    <Image loading="lazy" src={pricingShape1} alt="shape" />
                                 </div>
                                 <div className="shape_img shape_img2">
-                                    <Image src={pricingShape2} alt="shape" />
+                                    <Image loading="lazy" src={pricingShape2} alt="shape" />
                                 </div>
                                 <div className="pricing-box" data-aos="fade-up">
                                     <div className="pricing-header">
@@ -74,13 +74,13 @@ const PriceV1 = () => {
                                     </div>
                                     <div className="pricing-footer">
                                         <Link href="#" className="theme-btn">
-                                            {`Let's Start Now`} <Image src={btnArrow} alt="icon" />
+                                            {`Let's Start Now`} <Image loading="lazy" src={btnArrow} alt="icon" />
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="pricing-box" data-aos="fade-up" data-aos-delay={200}>
                                     <span className="pricing-featured-icon">
-                                        <Image src={featuredIcon} alt="icon" />
+                                        <Image loading="lazy" src={featuredIcon} alt="icon" />
                                     </span>
                                     <div className="pricing-header">
                                         <span className="title">Professional Plan</span>
@@ -98,7 +98,7 @@ const PriceV1 = () => {
                                     </div>
                                     <div className="pricing-footer">
                                         <Link href="/contact" className="theme-btn">
-                                            {`Let's Start Now`} <Image src={btnArrow} alt="icon" />
+                                            {`Let's Start Now`} <Image loading="lazy" src={btnArrow} alt="icon" />
                                         </Link>
                                     </div>
                                 </div>
@@ -107,10 +107,10 @@ const PriceV1 = () => {
                         <div className="tab-pane fade" id="annual" role="tabpanel" aria-labelledby="annual-tab">
                             <div className="pricing-lists">
                                 <div className="shape_img shape_img1">
-                                    <Image src={pricingShape1} alt="shape" />
+                                    <Image loading="lazy" src={pricingShape1} alt="shape" />
                                 </div>
                                 <div className="shape_img shape_img2">
-                                    <Image src={pricingShape2} alt="shape" />
+                                    <Image loading="lazy" src={pricingShape2} alt="shape" />
                                 </div>
                                 <div className="pricing-box" data-aos="fade-up">
                                     <div className="pricing-header">
@@ -129,13 +129,13 @@ const PriceV1 = () => {
                                     </div>
                                     <div className="pricing-footer">
                                         <Link href="/contact" className="theme-btn">
-                                            {`Let's Start Now`} <Image src={btnArrow} alt="icon" />
+                                            {`Let's Start Now`} <Image loading="lazy" src={btnArrow} alt="icon" />
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="pricing-box" data-aos="fade-up" data-aos-delay={200}>
                                     <span className="pricing-featured-icon">
-                                        <Image src={featuredIcon} alt="icon" />
+                                        <Image loading="lazy" src={featuredIcon} alt="icon" />
                                     </span>
                                     <div className="pricing-header">
                                         <span className="title">Professional Plan</span>
@@ -153,7 +153,7 @@ const PriceV1 = () => {
                                     </div>
                                     <div className="pricing-footer">
                                         <Link href="/contact" className="theme-btn">
-                                            {`Let's Start Now`} <Image src={btnArrow} alt="icon" />
+                                            {`Let's Start Now`} <Image loading="lazy" src={btnArrow} alt="icon" />
                                         </Link>
                                     </div>
                                 </div>

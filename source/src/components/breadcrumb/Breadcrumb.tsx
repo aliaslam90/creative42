@@ -8,7 +8,7 @@ const Breadcrumb = () => {
             <div className="breadcrumb-sec">
                 <div className="section-header">
                     <span className="section-subtitle">
-                        <Image src={Union} alt="icon" />
+                        <Image loading="lazy" src={Union} alt="icon" />
                         VISUAL CAMPAIGNS
                     </span>
                     <div className="right">

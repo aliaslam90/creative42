@@ -9,7 +9,7 @@ const ErrorHero = () => {
             <div className="hero-sec error-hero-sec">
                 <div className="custom-container">
                     <div className="hero-inner">
-                        <Image className="hero-shape" src={contact} alt="Shape" />
+                        <Image loading="lazy" className="hero-shape" src={contact} alt="Shape" />
                         <div className="hero-bottom error-box">
                             <div className="left">
                                 <h2><span>Oops!</span> Page Not<br />Found (404)</h2>
@@ -18,7 +18,7 @@ const ErrorHero = () => {
                             </p>
                             <Link href="/contact" className="theme-btn">
                                 Back To Home
-                                <Image src={btnArrow} alt="icon" />
+                                <Image loading="lazy" src={btnArrow} alt="icon" />
                             </Link>
                         </div>
                     </div>

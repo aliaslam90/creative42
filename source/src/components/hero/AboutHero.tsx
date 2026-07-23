@@ -43,7 +43,7 @@ const HeroV2 = ({ title }: DataType) => {
                             </div>
                             <Link href="/contact" className="theme-btn">
                                 {`Let's Creative`}
-                                <Image src={btnArrow} alt="icon" />
+                                <Image src={btnArrow} alt="icon" loading="lazy" />
                             </Link>
                         </div>
                     </div>

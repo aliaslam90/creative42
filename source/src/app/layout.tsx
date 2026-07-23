@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.className} ${urbanist.className}`}>
+      <body className={`${playfairDisplay.className} ${urbanist.className}`} suppressHydrationWarning>
         <ToastContainer />
         <Dependency />
         {children}

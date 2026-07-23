@@ -27,7 +27,7 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
                         <Link href={`/project-details/${id}`}>View</Link>
                     </div>
                     <div className="img-box">
-                        <Image src={`/assets/images/${thumb}`} alt="image" width={2544} height={1336} />
+                        <Image loading="lazy" src={`/assets/images/${thumb}`} alt="image" width={2544} height={1336} />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box">

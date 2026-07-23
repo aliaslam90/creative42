@@ -26,7 +26,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                 <div className="project-single-header">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             {name}
                         </span>
                         <AnimatedText>
@@ -37,7 +37,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                 <div className="project-single-body">
                     <div className="feature-project">
                         <div className="img-box" >
-                            <Image src={`/assets/images/${thumbFull1}`} alt="project-single" width={1900} height={925} />
+                            <Image loading="lazy" src={`/assets/images/${thumbFull1}`} alt="project-single" width={1900} height={925} />
                         </div>
                         <div className="feature-project-infos">
                             <div className="feature-project-info-box project-name">
@@ -55,7 +55,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                             <div className="feature-project-info-box">
                                 <Link href="/contact" className="theme-btn">
                                     GET STARTED
-                                    <Image src={btnArrow} alt="icon" />
+                                    <Image loading="lazy" src={btnArrow} alt="icon" />
                                 </Link>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                     <div className="project-single-content-wrap">
                         <div className="section-header">
                             <span className="section-subtitle">
-                                <Image src={Union} alt="icon" />
+                                <Image loading="lazy" src={Union} alt="icon" />
                                 KEY FEATURES
                             </span>
                             <div className="right">
@@ -81,11 +81,11 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                             </div>
                         </div>
                         <div className="full-image" ref={containerRef}>
-                            <Image className="scaleDown" src={`/assets/images/${thumbFull2}`} alt="project-single" width={1900} height={925} />
+                            <Image loading="lazy" className="scaleDown" src={`/assets/images/${thumbFull2}`} alt="project-single" width={1900} height={925} />
                         </div>
                         <div className="section-header">
                             <span className="section-subtitle">
-                                <Image src={Union} alt="icon" />
+                                <Image loading="lazy" src={Union} alt="icon" />
                                 SERVICE BENEFITS
                             </span>
                             <div className="right">

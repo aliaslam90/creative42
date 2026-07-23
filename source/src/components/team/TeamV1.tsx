@@ -15,7 +15,7 @@ const TeamV1 = () => {
             <div className="team-sec" id="team">
                 <div className="section-header">
                     <span className="section-subtitle">
-                        <Image src={Union} alt="icon" />
+                        <Image loading="lazy" src={Union} alt="icon" />
                         OUR MEMBERS
                     </span>
                 </div>
@@ -27,16 +27,16 @@ const TeamV1 = () => {
 
                     {/* Join Us Section */}
                     <div className="team-cv-box" data-aos="fade-up" data-aos-delay={400}>
-                        <Image src={shape} alt="shape" className="overlay" />
+                        <Image loading="lazy" src={shape} alt="shape" className="overlay" />
                         <div className="team-cv-header">
-                            <Image src={logoCreative} alt="Creative42 logo" />
+                            <Image loading="lazy" src={logoCreative} alt="Creative42 logo" />
                             <h3 className="title">Become Our <br />Member?</h3>
                             <p>Join Creative42.ai and help UAE brands see their next move from a smarter angle.</p>
                         </div>
                         <div className="team-cv-footer">
                             <Link href="/contact" className="theme-btn">
                                 Apply CV
-                                <Image src={btnArrow} alt="icon" />
+                                <Image loading="lazy" src={btnArrow} alt="icon" />
                             </Link>
                         </div>
                     </div>

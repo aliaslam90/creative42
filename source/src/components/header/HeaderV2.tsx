@@ -10,7 +10,7 @@ const HeaderV2 = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={logoCreative} alt="Creative42 logo" />
+                            <Image loading="lazy" src={logoCreative} alt="Creative42 logo" />
                         </Link>
 
                         {/* Navigation menu */}

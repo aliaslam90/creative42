@@ -1108,22 +1108,34 @@ a {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(620px 360px at 50% 0%, rgba(110, 160, 255, 0.14), rgba(110, 160, 255, 0) 70%),
-        radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px) 0 0 / 28px 28px,
+        radial-gradient(560px 320px at 22% 0%, rgba(110, 160, 255, 0.16), rgba(110, 160, 255, 0) 70%),
+        radial-gradient(520px 300px at 82% 10%, rgba(200, 162, 68, 0.1), rgba(200, 162, 68, 0) 70%),
+        radial-gradient(circle, rgba(0, 0, 0, 0.055) 1px, transparent 1px) 0 0 / 26px 26px,
         #ffffff;
+}
+
+.hero-sec.inner-page-hero-sec::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0));
+    z-index: 1;
 }
 
 .hero-sec.inner-page-hero-sec .hero-inner.home-hero-inner {
     position: relative;
     z-index: 1;
-    height: 550px;
+    height: 480px;
     min-height: 0;
-    padding: 150px 72px 60px;
+    padding: 120px 72px 50px;
     justify-content: center;
 }
 
 .hero-sec.inner-page-hero-sec .hero-title-line {
-    font-size: clamp(40px, 5vw, 64px);
+    font-size: clamp(38px, 4.6vw, 60px);
 }
 
 .hero-sec.inner-page-hero-sec .left.hero-title-overlay {
@@ -1135,7 +1147,7 @@ a {
 
 @media (max-width: 767px) {
     .hero-sec.inner-page-hero-sec .hero-inner.home-hero-inner {
-        height: 420px;
+        height: 400px;
         padding: 100px 20px 40px;
     }
 }
@@ -1151,6 +1163,14 @@ a {
     pointer-events: none;
     opacity: 0.55;
     overflow: hidden;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    mask-composite: intersect;
 }
 
 .home-hero-video video {
@@ -3230,19 +3250,31 @@ a {
 .contact-form textarea,
 .contact-form input {
     width: 100%;
-    background: none;
+    background: rgba(255, 255, 255, 0.04);
     color: var(--primary);
-    border: 1px solid rgba(136, 136, 136, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 12px !important;
     padding: 15px 28px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-form textarea::placeholder,
+.contact-form input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-form textarea:hover,
+.contact-form input:hover {
+    border-color: rgba(255, 255, 255, 0.38);
 }
 
 .contact-form textarea:focus,
 .contact-form input:focus {
     border-color: #0099ff;
+    background: rgba(255, 255, 255, 0.07);
     outline: none;
     box-shadow: none;
 }
@@ -3364,9 +3396,27 @@ a {
 
 .contact-sec-2 .contact-form .input-group input,
 .contact-sec-2 .contact-form .input-group textarea {
-    background: #000000;
-    border: none;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     padding: 23px 28px;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-sec-2 .contact-form .input-group input::placeholder,
+.contact-sec-2 .contact-form .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-sec-2 .contact-form .input-group input:hover,
+.contact-sec-2 .contact-form .input-group textarea:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-sec-2 .contact-form .input-group input:focus,
+.contact-sec-2 .contact-form .input-group textarea:focus {
+    border-color: #0099ff;
+    background: rgba(255, 255, 255, 0.07);
+    outline: none;
 }
 
 .contact-sec-2 .contact-form .input-group textarea {
@@ -3400,18 +3450,23 @@ a {
 }
 
 .radio-btns .radio-btn label {
-    background: #000000;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 12px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
-    color: #666666;
+    color: rgba(255, 255, 255, 0.7);
     position: relative;
-    padding: 22px 30px;
     padding: 19px 30px;
     margin: 0;
     transition: 0.3s;
     -webkit-transition: 0.3s;
+}
+
+.radio-btns .radio-btn:hover label {
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #ffffff;
 }
 
 .radio-btns .radio-btn input {
@@ -3425,6 +3480,7 @@ a {
 
 .radio-btns .radio-btn input:checked~label {
     background: #ffffff;
+    border-color: #ffffff;
     color: #000000;
 }
 
@@ -3440,7 +3496,7 @@ a {
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #666666;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
 }
 
@@ -3449,7 +3505,7 @@ a {
 }
 
 .checkbox-btn .checkbox-label {
-    color: #666666;
+    color: rgba(255, 255, 255, 0.7);
     transition: 0.3s;
     -webkit-transition: 0.3s;
 }
@@ -3473,7 +3529,8 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 6px;
-    background: #000000;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     position: relative;
     transition: 0.3s;
     -webkit-transition: 0.3s;

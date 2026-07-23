@@ -7,7 +7,7 @@ const FooterV2 = () => {
             <footer className="footer-area">
                 <div className="footer-bottom">
                     <div className="split-text-anim">
-                        <Image data-aos="slide-up" data-aos-duration={700} src={footerLogo} alt="Creative42 logo" />
+                        <Image loading="lazy" data-aos="slide-up" data-aos-duration={700} src={footerLogo} alt="Creative42 logo" />
                     </div>
                 </div>
             </footer>

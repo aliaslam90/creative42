@@ -9,7 +9,7 @@ const ProcessV1 = () => {
             <div className="process-sec">
                 <div className="section-header section-header2">
                     <span className="section-subtitle">
-                        <Image src={Union} alt="icon" />
+                        <Image loading="lazy" src={Union} alt="icon" />
                         Our Process
                     </span>
                     <h2 className="section-title section-title2">

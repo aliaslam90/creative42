@@ -9,7 +9,7 @@ const FaqV1 = () => {
             <div className="faq-sec">
                 <div className="section-header section-header2">
                     <span className="section-subtitle">
-                        <Image src={Union} alt="icon" />
+                        <Image loading="lazy" src={Union} alt="icon" />
                         Faq
                     </span>
                     <h2 className="section-title section-title2">
@@ -22,10 +22,10 @@ const FaqV1 = () => {
                 {/* Faq lists */}
                 <div className="accordion faq-lists" id="accordionExample">
                     <div className="shape_img shape_img1">
-                        <Image src={pricingShape1} alt="shape" />
+                        <Image loading="lazy" src={pricingShape1} alt="shape" />
                     </div>
                     <div className="shape_img shape_img2">
-                        <Image src={pricingShape2} alt="shape" />
+                        <Image loading="lazy" src={pricingShape2} alt="shape" />
                     </div>
 
                     {/* Faq 1 */}

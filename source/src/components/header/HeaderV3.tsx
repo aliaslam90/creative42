@@ -57,7 +57,7 @@ const HeaderV3 = () => {
                     </span>
 
                     {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" />
+                    <Image loading="lazy" src={sidebarbg} alt="sidebar" className="sidebar-shape" />
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
@@ -106,7 +106,7 @@ const HeaderV3 = () => {
                     </span>
 
                     {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" />
+                    <Image loading="lazy" src={sidebarbg} alt="sidebar" className="sidebar-shape" />
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
@@ -143,7 +143,7 @@ const HeaderV3 = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={logoCreative} alt="Creative42 logo" />
+                            <Image loading="lazy" src={logoCreative} alt="Creative42 logo" />
                         </Link>
 
                         {/* Navigation menu */}

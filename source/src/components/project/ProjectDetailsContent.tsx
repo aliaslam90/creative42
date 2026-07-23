@@ -17,7 +17,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                 <div className="project-single-header">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             Dimension Dynamics
                         </span>
                         <AnimatedText>
@@ -27,7 +27,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                 </div>
                 <div className="feature-project">
                     <div className="img-box">
-                        <Image className="scaleDown" src={`/assets/images/${thumb}`} width={2544} height={1336} alt="project-single" />
+                        <Image loading="lazy" className="scaleDown" src={`/assets/images/${thumb}`} width={2544} height={1336} alt="project-single" />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box project-name">
@@ -51,7 +51,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                 <div className="project-single-content-wrap">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             RESEARCH
                         </span>
                         <div className="right">
@@ -62,7 +62,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     </div>
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             DESIGN
                         </span>
                         <div className="right">
@@ -73,7 +73,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     </div>
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={Union} alt="icon" />
+                            <Image loading="lazy" src={Union} alt="icon" />
                             DEVELOPMENT
                         </span>
                         <div className="right">
@@ -91,7 +91,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     </div>
                 </div>
                 <div className="full-image">
-                    <Image className="scaleDown" src={`/assets/images/${thumb}`} alt="project-single" width={2544} height={1336} />
+                    <Image loading="lazy" className="scaleDown" src={`/assets/images/${thumb}`} alt="project-single" width={2544} height={1336} />
                 </div>
             </div>
         </>
