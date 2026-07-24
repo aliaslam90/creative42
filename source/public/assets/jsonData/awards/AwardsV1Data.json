@@ -3,36 +3,42 @@
         "id": 1,
         "activeClass": "active",
         "title": "I. Define the 42 Degree Angle",
-        "date": "Discovery"
+        "date": "Discovery",
+        "description": "We dig into your market, audience, and competitors to find the angle nobody else is looking from."
     },
     {
         "id": 2,
         "activeClass": "",
         "title": "II. Ideate the Direction",
-        "date": "Concepts"
+        "date": "Concepts",
+        "description": "Raw ideas get pressure-tested against that angle and shaped into a handful of directions worth building on."
     },
     {
         "id": 3,
         "activeClass": "",
         "title": "III. Design the Experience",
-        "date": "Identity"
+        "date": "Identity",
+        "description": "The chosen direction becomes a real visual and verbal system — logo, voice, and everything in between."
     },
     {
         "id": 4,
         "activeClass": "",
         "title": "IV. Develop the System",
-        "date": "Build"
+        "date": "Build",
+        "description": "Design turns into a working product: websites, apps, and every touchpoint built to spec."
     },
     {
         "id": 5,
         "activeClass": "",
         "title": "V. Launch with Momentum",
-        "date": "Go Live"
+        "date": "Go Live",
+        "description": "We launch with a plan, not a guess — rollout, messaging, and momentum lined up from day one."
     },
     {
         "id": 6,
         "activeClass": "",
         "title": "VI. Optimize What Works",
-        "date": "Growth"
+        "date": "Growth",
+        "description": "Post-launch, we track what's working in market and keep sharpening the angle further."
     }
 ]

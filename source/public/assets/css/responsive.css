@@ -49,7 +49,6 @@
     }
 
     .service-sec>.custom-container,
-    .awards-box .awards-inner,
     .about-sec .custom-container {
         padding-left: 72px;
         padding-right: 72px;
@@ -139,15 +138,6 @@
     .service-box .service-inner .service-img-box img {
         width: 220px;
         height: 202px;
-    }
-
-    .awards-sec .section-header {
-        padding-left: 42px;
-        padding-right: 42px;
-    }
-
-    .awards-box .awards-inner {
-        justify-content: space-between;
     }
 
     .footer-area .footer-top>.row {
@@ -276,10 +266,6 @@
 
     .feature-sec {
         padding: 40px 0px 40px 0px;
-    }
-
-    .awards-sec {
-        padding: 0px 0px 40px 0px;
     }
 
     .contact-sec {
@@ -482,31 +468,9 @@
         padding-right: 8px;
     }
 
-    .awards-box .awards-inner .date,
     .feature-project-infos .feature-project-info-box:nth-child(3),
     .feature-project-infos .feature-project-info-box:nth-child(4) {
         width: 100%;
-    }
-
-    .awards-box .awards-inner {
-        padding-left: 20px;
-        padding-right: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .awards-box .awards-inner h4 {
-        font-size: 38px;
-        line-height: 44px;
-    }
-
-    .awards-box .awards-inner .date {
-        text-align: right;
-    }
-
-    .awards-sec .section-header {
-        padding-left: 22px;
-        padding-right: 22px;
     }
 
     .process-lists,

@@ -2746,122 +2746,378 @@ a {
 }
 
 /* ===== # Design Process ===== */
-.awards-sec {
-    padding: 40px 0px 90px 0px;
-}
-
-.awards-sec .section-header {
-    margin-bottom: 90px;
-    padding: 0 72px;
-}
-
-.awards-box {
+.process-sec2 {
     position: relative;
     overflow: hidden;
-    z-index: 1;
-    cursor: pointer;
-    padding: 24px 0;
-    border-bottom: 1px solid #333333;
+    padding: 140px 72px;
+    background:
+        radial-gradient(640px 380px at 12% -10%, rgba(200, 162, 68, 0.1), transparent 70%),
+        radial-gradient(520px 320px at 92% 110%, rgba(200, 162, 68, 0.07), transparent 70%),
+        #000000;
 }
 
-.awards-box .overlay {
+.process2-header {
+    max-width: 720px;
+    margin: 0 auto 72px;
+    text-align: center;
+}
+
+.process2-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 22px;
+}
+
+.process2-eyebrow img {
+    display: block;
+    width: 16px;
+    height: 10px;
+}
+
+.process2-title {
+    font-family: var(--font_urbanist);
+    font-weight: 700;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--primary);
+    margin: 0 0 18px;
+}
+
+.process2-title span {
+    font-family: var(--font_playfair);
+    font-style: italic;
+    font-weight: 400;
+    color: #c8a244;
+}
+
+.process2-desc {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.process2-body {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+/* Stepper */
+.process2-stepper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.process2-track {
+    position: absolute;
+    top: 19px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.12);
+    z-index: 0;
+}
+
+.process2-track-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #c8a244, #ecc978);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process2-node {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 4px 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font_urbanist);
+}
+
+.process2-node-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: #000000;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.process2-node-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    transition: 0.3s;
+}
+
+.process2-node:hover .process2-node-dot {
+    border-color: #c8a244;
+    color: #c8a244;
+}
+
+.process2-node:hover .process2-node-label {
+    color: var(--primary);
+}
+
+.process2-node.is-done .process2-node-dot {
+    border-color: #c8a244;
+    color: #c8a244;
+}
+
+.process2-node.is-active .process2-node-dot {
+    border-color: #c8a244;
+    background: #c8a244;
+    color: #000000;
+    animation: process2Pulse 2s ease-out infinite;
+}
+
+.process2-node.is-active .process2-node-label {
+    color: var(--primary);
+}
+
+.process2-node:focus-visible .process2-node-dot {
+    outline: 2px solid #c8a244;
+    outline-offset: 3px;
+}
+
+@keyframes process2Pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(200, 162, 68, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 14px rgba(200, 162, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(200, 162, 68, 0);
+    }
+}
+
+/* Spotlight panel */
+.process2-panel {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    align-items: center;
+    gap: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 56px;
+}
+
+.process2-panel-index {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #c8a244;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.process2-panel-text h3 {
+    font-family: var(--font_playfair);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(24px, 2.8vw, 36px);
+    line-height: 1.25;
+    color: var(--primary);
+    margin: 0 0 16px;
+    animation: process2Fade 0.5s ease;
+}
+
+.process2-panel-text p {
+    max-width: 480px;
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0;
+    animation: process2Fade 0.5s ease;
+}
+
+@keyframes process2Fade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Angle visual — ties back to the "42 degree angle" brand story */
+.process2-angle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.process2-angle svg {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: visible;
+}
+
+.process2-angle-ring {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.12);
+    stroke-width: 1.5;
+}
+
+.process2-angle-arc {
+    fill: rgba(200, 162, 68, 0.16);
+    animation: process2Fade 0.5s ease;
+}
+
+.process2-angle-base {
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 1.5;
+}
+
+.process2-angle-needle {
+    stroke: #c8a244;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 6px rgba(200, 162, 68, 0.65));
+}
+
+.process2-angle-tip {
+    fill: #c8a244;
+}
+
+.process2-angle-value {
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-}
-
-.awards-box.active .overlay,
-.awards-box:hover .overlay {
-    opacity: 1;
-}
-
-.awards-box .awards-inner {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    inset: 0;
     display: flex;
-    align-items: flex-end;
-    gap: 10px;
-    padding-left: 72px;
-    padding-right: 72px;
-}
-
-.awards-box .awards-inner h4 {
-    font-size: 64px;
-    line-height: 68px;
-    letter-spacing: -0.04em;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font_playfair);
+    font-style: italic;
+    font-size: 34px;
     color: var(--primary);
-    font-weight: 400;
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(77, 77, 77) 133%);
-    padding: 7px;
-    margin: -7px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    pointer-events: none;
 }
 
-.awards-box.active .awards-inner h4,
-.awards-box:hover .awards-inner h4 {
-    background: none;
-    background-image: none !important;
-    -webkit-text-fill-color: inherit;
-    color: var(--primary);
+@media (prefers-reduced-motion: reduce) {
+
+    .process2-node.is-active .process2-node-dot,
+    .process2-panel-text h3,
+    .process2-panel-text p,
+    .process2-angle-arc {
+        animation: none;
+    }
+
+    .process2-angle-needle {
+        transition: none;
+    }
 }
 
-.awards-box .awards-inner .date {
-    display: block;
-    color: #808080;
-    font-size: 14px;
-    margin: 0;
-    line-height: 20px;
-    font-weight: 500;
+@media (max-width: 1200px) {
+    .process2-panel {
+        grid-template-columns: 1fr 220px;
+        padding: 44px;
+        gap: 32px;
+    }
+
+    .process2-angle {
+        width: 180px;
+        height: 180px;
+    }
 }
 
-.awards-box.active .awards-inner .date,
-.awards-box:hover .awards-inner .date {
-    color: var(--primary);
+@media (max-width: 991px) {
+    .process-sec2 {
+        padding: 100px 24px;
+    }
+
+    .process2-header {
+        margin-bottom: 56px;
+    }
+
+    .process2-panel {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 28px;
+    }
+
+    .process2-panel-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.awards-list .awards-box .overlay {
-    background-image: url('/assets/images/process1.png')
-}
+@media (max-width: 767px) {
+    .process-sec2 {
+        padding: 80px 16px;
+    }
 
-.awards-list .awards-box:nth-child(2) .overlay {
-    background-image: url('/assets/images/process2.png')
-}
+    .process2-stepper {
+        grid-template-columns: repeat(6, minmax(56px, 1fr));
+        gap: 2px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
 
-.awards-list .awards-box:nth-child(3) .overlay {
-    background-image: url('/assets/images/process3.png')
-}
+    .process2-track {
+        left: 28px;
+        right: 28px;
+    }
 
-.awards-list .awards-box:nth-child(4) .overlay {
-    background-image: url('/assets/images/process4.png')
-}
+    .process2-node-dot {
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
+    }
 
-.awards-list .awards-box:nth-child(5) .overlay {
-    background-image: url('/assets/images/process5.png')
-}
+    .process2-node-label {
+        font-size: 9px;
+    }
 
-.awards-list .awards-box:nth-child(6) .overlay {
-    background-image: url('/assets/images/process6.png')
-}
+    .process2-panel {
+        padding: 32px 20px;
+        border-radius: 18px;
+    }
 
-/*.awards-box .overlay.bg-img1 {
-    background-image: url('/assets/images/award-bg1.png');
-}*/
+    .process2-angle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .process2-angle-value {
+        font-size: 26px;
+    }
+}
 
 /* ===== # Partner ===== */
 .our-partner-sec {
@@ -6687,6 +6943,12 @@ a.our-work-more-item i {
     position: relative;
     background: #ffffff;
     padding: 120px 72px;
+}
+
+/* Close the partner strip's bottom margin gap so the black body background
+   doesn't show through as a seam between it and this (light) section. */
+.our-partner-sec + .offices-sec {
+    margin-top: -38px;
 }
 
 .offices-header {
