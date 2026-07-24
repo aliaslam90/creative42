@@ -11,7 +11,10 @@ const BlogPage = () => {
         <>
             <div className="aixor-main blog-page">
                 <LayoutV3>
-                    <HeroV2 title="Blog Insights" />
+                    <HeroV2
+                        title="Blog Insights"
+                        subtitle="Ideas, perspectives, and lessons from inside the studio."
+                    />
                     <FeatureV3 />
                 </LayoutV3>
             </div>

@@ -16,7 +16,10 @@ const AboutPage = () => {
         <>
             <div className="aixor-main about-page">
                 <LayoutV3>
-                    <HeroV2 title="About Us" />
+                    <HeroV2
+                        title="About Us"
+                        subtitle="The story, the strategy, and the sharper angle behind Creative42."
+                    />
                     <AboutV2 />
                     <ServicesV2 />
                     <ProcessV1 />

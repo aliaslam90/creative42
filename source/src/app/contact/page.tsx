@@ -13,7 +13,10 @@ const ContactPage = () => {
     return (
         <>
             <LayoutV3>
-                <HeroV2 title="Contact Us" />
+                <HeroV2
+                    title="Contact Us"
+                    subtitle="Let's build something at a sharper angle — tell us about your project."
+                />
                 <ContactV2 />
                 <FaqV1 />
                 <PartnerV1 />

@@ -13,7 +13,10 @@ const FaqPage = () => {
         <>
             <div className="aixor-main faq-page">
                 <LayoutV3>
-                    <HeroV2 title="Frequent Questions" />
+                    <HeroV2
+                        title="Frequent Questions"
+                        subtitle="Straight answers on how we work, what we deliver, and what to expect."
+                    />
                     <FaqV1 />
                     <ContactV1 />
                     <PartnerV1 />
