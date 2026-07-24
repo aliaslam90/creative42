@@ -5358,6 +5358,39 @@ a {
     padding-top: 48px;
 }
 
+/* Stacking variant — used on the Projects page: each card pins in place
+   and the next one slides up to cover it, like a real pile of cards. */
+.our-work-list.is-stacked {
+    display: block;
+}
+
+.our-work-list.is-stacked .our-work-card {
+    position: sticky;
+    top: calc(96px + var(--stack-i, 0) * 14px);
+    z-index: calc(var(--stack-i, 0) + 1);
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+    border-radius: 28px;
+    padding: 40px clamp(20px, 4vw, 48px) 48px;
+    margin-bottom: 64px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+    transform-origin: top center;
+    will-change: transform, opacity;
+}
+
+.our-work-list.is-stacked .our-work-card:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .our-work-list.is-stacked .our-work-card {
+        position: static;
+        box-shadow: none;
+        margin-bottom: 40px;
+    }
+}
+
 .our-work-card-top {
     display: flex;
     align-items: flex-start;

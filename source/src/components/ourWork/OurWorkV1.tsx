@@ -1,8 +1,59 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OurWorkFeaturedData from "@/assets/jsonData/ourWork/OurWorkFeaturedData.json";
 import OurWorkMoreData from "@/assets/jsonData/ourWork/OurWorkMoreData.json";
 
-const OurWorkV1 = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+interface OurWorkV1Props {
+    /** Pins each project card in place and lets the next one stack over it while scrolling. */
+    stackCards?: boolean;
+}
+
+const OurWorkV1 = ({ stackCards = false }: OurWorkV1Props) => {
+    const cardRefs = useRef<HTMLDivElement[]>([]);
+
+    useEffect(() => {
+        if (!stackCards) return;
+
+        const mm = gsap.matchMedia();
+
+        // Sticky positioning (in CSS) does the actual stacking; this just
+        // shrinks/dims each card as the next one arrives to cover it, so the
+        // pile reads as a real stack of cards rather than a hard cut.
+        mm.add("(min-width: 992px)", () => {
+            const cards = cardRefs.current.filter(Boolean);
+
+            const triggers = cards.slice(0, -1).map((card, i) => {
+                const next = cards[i + 1];
+                return ScrollTrigger.create({
+                    trigger: next,
+                    start: "top bottom",
+                    end: "top top",
+                    scrub: true,
+                    onUpdate: (self) => {
+                        gsap.set(card, {
+                            scale: gsap.utils.interpolate(1, 0.94, self.progress),
+                            opacity: gsap.utils.interpolate(1, 0.6, self.progress),
+                        });
+                    },
+                });
+            });
+
+            return () => {
+                triggers.forEach((trigger) => trigger.kill());
+                gsap.set(cards, { clearProps: "scale,opacity" });
+            };
+        });
+
+        return () => mm.revert();
+    }, [stackCards]);
+
     return (
         <div className="our-work-sec" id="projects">
             <div className="custom-container">
@@ -13,9 +64,16 @@ const OurWorkV1 = () => {
                     <p>A selection of brand, product, and development projects we&apos;ve delivered for real clients.</p>
                 </div>
 
-                <div className="our-work-list">
-                    {OurWorkFeaturedData.map((project) => (
-                        <div className="our-work-card" key={project.id}>
+                <div className={`our-work-list${stackCards ? " is-stacked" : ""}`}>
+                    {OurWorkFeaturedData.map((project, index) => (
+                        <div
+                            className="our-work-card"
+                            key={project.id}
+                            style={stackCards ? ({ "--stack-i": index } as CSSProperties) : undefined}
+                            ref={(el) => {
+                                if (el) cardRefs.current[index] = el;
+                            }}
+                        >
                             <div className="our-work-card-top">
                                 <div className="our-work-card-title">
                                     <h3>{project.title} <span>– {project.subtitle}</span></h3>
