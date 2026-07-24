@@ -2751,8 +2751,8 @@ a {
     overflow: hidden;
     padding: 140px 72px;
     background:
-        radial-gradient(640px 380px at 12% -10%, rgba(200, 162, 68, 0.1), transparent 70%),
-        radial-gradient(520px 320px at 92% 110%, rgba(200, 162, 68, 0.07), transparent 70%),
+        radial-gradient(640px 380px at 12% -10%, rgba(255, 255, 255, 0.06), transparent 70%),
+        radial-gradient(520px 320px at 92% 110%, rgba(255, 255, 255, 0.04), transparent 70%),
         #000000;
 }
 
@@ -2794,7 +2794,7 @@ a {
     font-family: var(--font_playfair);
     font-style: italic;
     font-weight: 400;
-    color: #c8a244;
+    color: var(--primary);
 }
 
 .process2-desc {
@@ -2834,7 +2834,7 @@ a {
     top: 0;
     left: 0;
     height: 100%;
-    background: linear-gradient(90deg, #c8a244, #ecc978);
+    background: #ffffff;
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -2877,8 +2877,8 @@ a {
 }
 
 .process2-node:hover .process2-node-dot {
-    border-color: #c8a244;
-    color: #c8a244;
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .process2-node:hover .process2-node-label {
@@ -2886,13 +2886,13 @@ a {
 }
 
 .process2-node.is-done .process2-node-dot {
-    border-color: #c8a244;
-    color: #c8a244;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--primary);
 }
 
 .process2-node.is-active .process2-node-dot {
-    border-color: #c8a244;
-    background: #c8a244;
+    border-color: #ffffff;
+    background: #ffffff;
     color: #000000;
     animation: process2Pulse 2s ease-out infinite;
 }
@@ -2902,21 +2902,21 @@ a {
 }
 
 .process2-node:focus-visible .process2-node-dot {
-    outline: 2px solid #c8a244;
+    outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
 
 @keyframes process2Pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(200, 162, 68, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35);
     }
 
     70% {
-        box-shadow: 0 0 0 14px rgba(200, 162, 68, 0);
+        box-shadow: 0 0 0 14px rgba(255, 255, 255, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(200, 162, 68, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     }
 }
 
@@ -2935,7 +2935,7 @@ a {
 .process2-panel-index {
     display: inline-block;
     margin-bottom: 16px;
-    color: #c8a244;
+    color: var(--secondary);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -2973,60 +2973,48 @@ a {
     }
 }
 
-/* Angle visual — ties back to the "42 degree angle" brand story */
-.process2-angle {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
-}
-
-.process2-angle svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-}
-
-.process2-angle-ring {
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.12);
-    stroke-width: 1.5;
-}
-
-.process2-angle-arc {
-    fill: rgba(200, 162, 68, 0.16);
-    animation: process2Fade 0.5s ease;
-}
-
-.process2-angle-base {
-    stroke: rgba(255, 255, 255, 0.2);
-    stroke-width: 1.5;
-}
-
-.process2-angle-needle {
-    stroke: #c8a244;
-    stroke-width: 3;
-    stroke-linecap: round;
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 0 6px rgba(200, 162, 68, 0.65));
-}
-
-.process2-angle-tip {
-    fill: #c8a244;
-}
-
-.process2-angle-value {
-    position: absolute;
-    inset: 0;
+/* Step visual — a hand-drawn line icon per stage, monochrome, that draws
+   itself in whenever the active step changes. */
+.process2-visual {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font_playfair);
-    font-style: italic;
-    font-size: 34px;
-    color: var(--primary);
-    pointer-events: none;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.process2-visual-icon {
+    width: 96px;
+    height: 96px;
+    animation: process2Fade 0.5s ease;
+}
+
+.process2-visual-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: #ffffff;
+}
+
+.process2-visual-icon svg path,
+.process2-visual-icon svg circle,
+.process2-visual-icon svg rect {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    animation: process2Draw 1s ease forwards;
+}
+
+@keyframes process2Draw {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3034,12 +3022,15 @@ a {
     .process2-node.is-active .process2-node-dot,
     .process2-panel-text h3,
     .process2-panel-text p,
-    .process2-angle-arc {
+    .process2-visual-icon {
         animation: none;
     }
 
-    .process2-angle-needle {
-        transition: none;
+    .process2-visual-icon svg path,
+    .process2-visual-icon svg circle,
+    .process2-visual-icon svg rect {
+        animation: none;
+        stroke-dashoffset: 0;
     }
 }
 
@@ -3050,9 +3041,14 @@ a {
         gap: 32px;
     }
 
-    .process2-angle {
+    .process2-visual {
         width: 180px;
         height: 180px;
+    }
+
+    .process2-visual-icon {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -3109,13 +3105,14 @@ a {
         border-radius: 18px;
     }
 
-    .process2-angle {
+    .process2-visual {
         width: 150px;
         height: 150px;
     }
 
-    .process2-angle-value {
-        font-size: 26px;
+    .process2-visual-icon {
+        width: 64px;
+        height: 64px;
     }
 }
 

@@ -5,21 +5,50 @@ import Image from "next/image";
 import Union from "@/assets/images/Union.svg";
 import AwardsV1Data from "@/assets/jsonData/awards/AwardsV1Data.json";
 
-const STEP_ANGLES = [7, 14, 21, 28, 35, 42];
 const AUTOPLAY_MS = 4000;
 
-function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
-    const rad = (angleDeg * Math.PI) / 180;
-    return { x: cx + r * Math.cos(rad), y: cy - r * Math.sin(rad) };
-}
-
-function describeArc(cx: number, cy: number, r: number, angleDeg: number) {
-    if (angleDeg <= 0) return "";
-    const start = polarToCartesian(cx, cy, r, 0);
-    const end = polarToCartesian(cx, cy, r, angleDeg);
-    const largeArcFlag = angleDeg > 180 ? 1 : 0;
-    return `M ${cx} ${cy} L ${start.x} ${start.y} A ${r} ${r} 0 ${largeArcFlag} 0 ${end.x} ${end.y} Z`;
-}
+// One hand-drawn line icon per stage, monochrome, animated with a stroke
+// "draw-in" each time it becomes active.
+const STEP_ICONS = [
+    // Discovery — magnifying glass over a grid
+    <svg key="discovery" viewBox="0 0 64 64" fill="none">
+        <path d="M8 8h20v20H8z" opacity="0.35" />
+        <path d="M8 34h12v12H8z" opacity="0.35" />
+        <circle cx="40" cy="40" r="13" />
+        <path d="M49 49l8 8" strokeLinecap="round" />
+    </svg>,
+    // Concepts — a lightbulb of ideas
+    <svg key="concepts" viewBox="0 0 64 64" fill="none">
+        <path d="M32 8a15 15 0 0 0-8 27.7c1.6 1.1 2.6 3 2.6 5V44h10.8v-3.3c0-2 1-3.9 2.6-5A15 15 0 0 0 32 8z" />
+        <path d="M26 50h12M28 56h8" strokeLinecap="round" />
+        <path d="M32 2v4M8 26h4M52 26h4M14 12l3 3M50 12l-3 3" strokeLinecap="round" />
+    </svg>,
+    // Identity — abstract brand mark
+    <svg key="identity" viewBox="0 0 64 64" fill="none">
+        <circle cx="24" cy="26" r="14" />
+        <path d="M34 40l16-24 6 4-18 26z" />
+        <circle cx="24" cy="26" r="4" fill="currentColor" stroke="none" />
+    </svg>,
+    // Build — layered / wireframe screen
+    <svg key="build" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="12" width="48" height="32" rx="3" />
+        <path d="M8 22h48" />
+        <path d="M16 30h14M16 36h20" strokeLinecap="round" />
+        <path d="M24 50h16M32 44v6" strokeLinecap="round" />
+    </svg>,
+    // Go Live — rocket ascending
+    <svg key="golive" viewBox="0 0 64 64" fill="none">
+        <path d="M32 6c8 6 11 16 11 26 0 6-2 10-11 18-9-8-11-12-11-18 0-10 3-20 11-26z" />
+        <circle cx="32" cy="24" r="4" />
+        <path d="M21 40l-7 12M43 40l7 12M27 52h10" strokeLinecap="round" />
+    </svg>,
+    // Growth — ascending bar chart
+    <svg key="growth" viewBox="0 0 64 64" fill="none">
+        <path d="M10 50V34M24 50V24M38 50V30M52 50V14" strokeLinecap="round" />
+        <path d="M10 22l14-10 12 6L52 4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M42 4h10v10" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>,
+];
 
 const AwardsV1 = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -59,7 +88,6 @@ const AwardsV1 = () => {
     };
 
     const active = AwardsV1Data[activeIndex];
-    const angle = STEP_ANGLES[activeIndex] ?? 42;
 
     return (
         <div className="process-sec2" id="process" onMouseEnter={pause} onMouseLeave={resume}>
@@ -127,22 +155,10 @@ const AwardsV1 = () => {
                             <p key={`desc-${active.id}`}>{active.description}</p>
                         </div>
 
-                        <div className="process2-angle" aria-hidden="true">
-                            <svg viewBox="0 0 200 200">
-                                <circle className="process2-angle-ring" cx="100" cy="100" r="86" />
-                                <path key={active.id} className="process2-angle-arc" d={describeArc(100, 100, 70, angle)} />
-                                <line className="process2-angle-base" x1="100" y1="100" x2="186" y2="100" />
-                                <line
-                                    className="process2-angle-needle"
-                                    x1="100"
-                                    y1="100"
-                                    x2="186"
-                                    y2="100"
-                                    style={{ transform: `rotate(-${angle}deg)`, transformOrigin: "100px 100px" }}
-                                />
-                                <circle className="process2-angle-tip" cx="100" cy="100" r="4" />
-                            </svg>
-                            <span className="process2-angle-value">{angle}&deg;</span>
+                        <div className="process2-visual" aria-hidden="true">
+                            <div className="process2-visual-icon" key={active.id}>
+                                {STEP_ICONS[activeIndex]}
+                            </div>
                         </div>
                     </div>
                 </div>
